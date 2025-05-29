@@ -1,0 +1,65 @@
+const express = require('express');
+const path = require('path'); // ✅ Make sure this is included
+
+const app = express();
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+
+app.use('/public', express.static('public'));
+
+
+
+// Routing starts here
+app.get('/', function (req, res) {
+    res.render("home", { title: 'Home' });
+});
+
+app.get('/introduction', function (req, res) {
+    res.render('introduction', { title: 'Introduction' });
+});
+
+app.get('/challenges', function (req, res) {
+    res.render('challenges', { title: 'Challenges' });
+});
+
+app.get('/privacy-act', function (req, res) {
+    res.render('privacy-act', { title: 'Privacy Act 2020' });
+});
+
+app.get('/principle-5', function (req, res) {
+    res.render('principle-5', { title: 'Principle 5' });
+});
+
+app.get('/principle-6', function (req, res) {
+    res.render('principle-6', { title: 'Principle 6' });
+});
+
+app.get('/principle-9', function (req, res) {
+    res.render('principle-9', { title: 'Principle 9' });
+});
+
+app.get('/principle-11', function (req, res) {
+    res.render('principle-11', { title: 'Principle 11' });
+});
+
+app.get('/gdpr', function (req, res) {
+    res.render('gdpr', { title: 'GDPR' });
+});
+
+app.get('/health-data', function (req, res) {
+    res.render('health-data', { title: 'Health Data' });
+});
+
+app.get('/nz-privacy-law', function (req, res) {
+    res.render('nz-privacy-law', { title: 'NZ Privacy Law' });
+});
+
+app.get('/conclusion', function (req, res) {
+    res.render('conclusion', { title: 'Conclusion' });
+});
+
+
+app.listen(process.env.port || 3000);
+console.log('Running at Port 3000');

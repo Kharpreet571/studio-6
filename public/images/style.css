@@ -1,0 +1,276 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts & Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f4f8;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    background: #34495e;
+    color: #ecf0f1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+}
+
+.nav-links li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+    background-color: #ecf0f1;
+    color: #34495e;
+}
+
+/* Main Content */
+.main-content {
+    padding: 120px 0 60px; /* padding top adjusted for fixed navbar */
+}
+
+.welcome h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    max-width: 700px;
+}
+
+.welcome ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    max-width: 700px;
+    color: #34495e;
+    font-size: 1.1rem;
+}
+
+.welcome ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #34495e;
+    color: #ecf0f1;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+/* Reset & Basics */ introduction 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9fb;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation */
+.header {
+    background-color: #111827;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo i {
+    color: #00bcd4;
+}
+
+/* Navbar */
+.navbar .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.navbar .nav-link {
+    color: #d1d5db;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #00bcd4;
+    transform: translateY(-2px);
+    border-bottom: 2px solid #00bcd4;
+}
+
+/* Main Content */
+.content-page {
+    padding: 30px 0;
+}
+.section-title {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #111827;
+}
+
+/* Highlight Boxes */
+.definition-box, .quote-box {
+    background-color: #e0f7fa;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 5px solid #00bcd4;
+    border-radius: 6px;
+}
+
+/* Lists & Icons */
+.key-points ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+.key-points li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #374151;
+}
+.key-points i {
+    color: #00bcd4;
+}
+
+/* Footer */
+.footer {
+    background-color: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+for challenges
+/* Modern Google-style Design */
+.privacy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+}
+
+.main-title {
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.challenge-card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.challenge-card h3 {
+    color: #1a73e8;
+    margin-top: 0;
+}
+
+.enforcement-content {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.text-block {
+    margin-bottom: 25px;
+}
+
+.text-block h3 {
+    color: #1a73e8;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+.intro-text {
+    color: #5f6368;
+    font-size: 1.1em;
+}
