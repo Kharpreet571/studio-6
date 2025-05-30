@@ -1,81 +1,77 @@
-<%- include('partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Privacy Challenges</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
 
-<div class="privacy-container">
-    <head>
-        <title>Data Privacy Challenges</title>
-        <link rel="stylesheet" href="/styles.css">
-      </head>
-      
-    
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">PrivacyAware</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/challenges">Challenges</a></li>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Main Container -->
+  <div class="privacy-container">
+    <h1 class="main-title">Data Privacy Challenges in the Digital Age</h1>
+
     <section class="challenges-section">
-        <h2>What Are the Key Challenges for Individuals and Companies?</h2>
-        <p class="intro-text">As reported by <em>(Bisht, 2024)</em>, here are some of the most significant data privacy challenges faced today:</p>
+      <h2>What Are the Key Challenges for Individuals and Companies?</h2>
+      <p class="intro-text">As reported by <em>(Bisht, 2024)</em>, here are some of the most significant data privacy challenges faced today:</p>
 
-        <div class="table-container">
-            <table class="challenges-table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Challenge</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Lack of Data Transparency</td>
-                        <td>Apps collect personal data without clearly informing users about how it’s used or shared.</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Risks of Cloud Computing</td>
-                        <td>Cloud storage increases exposure to breaches, especially with weak security or foreign storage laws.</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Weak Data Protection Laws</td>
-                        <td>Inconsistent or weak laws allow unchecked data collection and misuse.</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Frequent Data Breaches</td>
-                        <td>Human error, hacking, or theft often exposes sensitive personal data.</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Excessive Data Retention</td>
-                        <td>Holding onto data too long increases risks of leaks or unethical use.</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Emerging Technologies (AI/IoT)</td>
-                        <td>AI and IoT collect large data volumes, risking misuse or unauthorized profiling.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+      <div class="table-container">
+        <table class="challenges-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Challenge</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Lack of Data Transparency</td><td>Apps collect personal data without clearly informing users about how it’s used or shared.</td></tr>
+            <tr><td>2</td><td>Risks of Cloud Computing</td><td>Cloud storage increases exposure to breaches, especially with weak security or foreign storage laws.</td></tr>
+            <tr><td>3</td><td>Weak Data Protection Laws</td><td>Inconsistent or weak laws allow unchecked data collection and misuse.</td></tr>
+            <tr><td>4</td><td>Frequent Data Breaches</td><td>Human error, hacking, or theft often exposes sensitive personal data.</td></tr>
+            <tr><td>5</td><td>Excessive Data Retention</td><td>Holding onto data too long increases risks of leaks or unethical use.</td></tr>
+            <tr><td>6</td><td>Emerging Technologies (AI/IoT)</td><td>AI and IoT collect large data volumes, risking misuse or unauthorized profiling.</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="enforcement-section">
-        <h2>Challenges in Enforcing Data Privacy</h2>
-        
-        <div class="enforcement-content">
-            <div class="text-block">
-                <h3>Compliance and Implementation Difficulties</h3>
-                <p>Despite strict regulations, compliance remains difficult—especially for small businesses—due to high costs and complexity <em>(Tankard, 2016)</em>. Multinational companies also face legal conflicts across jurisdictions.</p>
-            </div>
-            
-            <div class="text-block">
-                <h3>Technical Limitations</h3>
-                <p>Balancing data utility and privacy is challenging: heavy anonymization reduces research value <em>(Ohm, 2010)</em>, while de-anonymization attacks show even "secure" data can be re-identified <em>(Shmatikov, 2008)</em>.</p>
-            </div>
-            
-            <div class="text-block">
-                <h3>Emerging Privacy Threats</h3>
-                <p>AI and big data analytics can extract private details from seemingly anonymous datasets. IoT expands surveillance risks, increasing exposure to leaks.</p>
-            </div>
-        </div>
-    </section>
-</div>
+      <h2>Challenges in Enforcing Data Privacy</h2>
 
-<%- include('partials/footer') %>
+      <div class="enforcement-content">
+        <div class="text-block">
+          <h3>Compliance and Implementation Difficulties</h3>
+          <p>Despite strict regulations, compliance remains difficult—especially for small businesses—due to high costs and complexity <em>(Tankard, 2016)</em>. Multinational companies also face legal conflicts across jurisdictions.</p>
+        </div>
+        <div class="text-block">
+          <h3>Technical Limitations</h3>
+          <p>Balancing data utility and privacy is challenging: heavy anonymization reduces research value <em>(Ohm, 2010)</em>, while de-anonymization attacks show even "secure" data can be re-identified <em>(Shmatikov, 2008)</em>.</p>
+        </div>
+        <div class="text-block">
+          <h3>Emerging Privacy Threats</h3>
+          <p>AI and big data analytics can extract private details from seemingly anonymous datasets. IoT expands surveillance risks, increasing exposure to leaks.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ✅ Footer -->
+  <footer class="footer">
+    <p>© 2025 My Website</p>
+  </footer>
+
+</body>
+</html>
