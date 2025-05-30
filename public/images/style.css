@@ -278,187 +278,394 @@ for challenges
 
 /* Reset & base */
 * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #c3ec52 0%, #0ba29d 100%);
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0a6170;
+  color: #f1f6f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  box-shadow: 0 4px 12px rgba(10, 97, 112, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  cursor: default;
+  user-select: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: #f1f6f9;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #e3f6f5;
+  border-bottom: 3px solid #e3f6f5;
+  outline: none;
+}
+
+/* Main container */
+.privacy-container {
+  background: #ffffffdd;
+  max-width: 900px;
+  margin: 3rem auto 5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 2rem 3rem 3rem;
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* Titles */
+.main-title {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #0a6170;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.challenges-section h2,
+.enforcement-section h2 {
+  font-weight: 600;
+  font-size: 1.9rem;
+  color: #0a6170;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #62c2b7;
+  padding-left: 0.8rem;
+}
+
+.intro-text {
+  font-style: italic;
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Table styles */
+.table-container {
+  overflow-x: auto;
+}
+
+.challenges-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  font-size: 1.05rem;
+}
+
+.challenges-table th,
+.challenges-table td {
+  padding: 15px 20px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.challenges-table thead th {
+  background-color: #62c2b7;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 10px 10px 0 0;
+  user-select: none;
+}
+
+.challenges-table tbody tr {
+  background: white;
+  box-shadow: 0 4px 12px rgb(98 194 183 / 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.challenges-table tbody tr:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgb(98 194 183 / 0.4);
+}
+
+.challenges-table tbody td:first-child {
+  font-weight: 600;
+  color: #0a6170;
+  width: 40px;
+}
+
+/* Enforcement content blocks */
+.enforcement-content {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.text-block {
+  background-color: #d9f0f0;
+  border-left: 7px solid #62c2b7;
+  padding: 1.2rem 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgb(98 194 183 / 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.text-block:hover {
+  background-color: #b1dedc;
+}
+
+.text-block h3 {
+  color: #0a6170;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.3rem 0;
+  font-size: 0.95rem;
+  color: #0a6170cc;
+  background: #d9f0f0;
+  box-shadow: inset 0 4px 6px #b1dedc88;
+  user-select: none;
+  margin-top: auto;
+}
+/* Reset some default styles */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   body {
-    background: linear-gradient(135deg, #c3ec52 0%, #0ba29d 100%);
-    color: #2c3e50;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 70px; /* space for fixed navbar */
   }
   
-  /* Navbar */
+  /* Navbar styling */
   .navbar {
-    background-color: #0a6170;
-    color: #f1f6f9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #004aad;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
-    box-shadow: 0 4px 12px rgba(10, 97, 112, 0.7);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+    font-weight: 600;
   }
   
   .nav-logo {
-    font-weight: 700;
     font-size: 1.8rem;
-    letter-spacing: 2px;
-    cursor: default;
-    user-select: none;
+    letter-spacing: 1.5px;
   }
   
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 25px;
   }
   
   .nav-links li a {
-    color: #f1f6f9;
+    color: #e0e7ff;
     text-decoration: none;
-    font-weight: 600;
     font-size: 1rem;
-    padding: 0.3rem 0.5rem;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    border-bottom: 3px solid transparent;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .nav-links li a:hover,
   .nav-links li a:focus {
-    color: #e3f6f5;
-    border-bottom: 3px solid #e3f6f5;
+    background: #e0e7ff;
+    color: #004aad;
     outline: none;
   }
   
   /* Main container */
   .privacy-container {
-    background: #ffffffdd;
-    max-width: 900px;
-    margin: 3rem auto 5rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    padding: 2rem 3rem 3rem;
-    backdrop-filter: saturate(180%) blur(20px);
+    max-width: 960px;
+    margin: 30px auto 50px;
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 74, 173, 0.1);
   }
   
-  /* Titles */
   .main-title {
-    font-weight: 700;
     font-size: 2.8rem;
-    color: #0a6170;
+    font-weight: 700;
+    color: #002766;
+    margin-bottom: 25px;
     text-align: center;
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.05em;
+  }
+  
+  .challenges-section, 
+  .enforcement-section {
+    margin-bottom: 45px;
   }
   
   .challenges-section h2,
   .enforcement-section h2 {
-    font-weight: 600;
-    font-size: 1.9rem;
-    color: #0a6170;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    border-left: 5px solid #62c2b7;
-    padding-left: 0.8rem;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #003a99;
+    border-bottom: 3px solid #004aad;
+    padding-bottom: 8px;
+    letter-spacing: 0.05em;
   }
   
   .intro-text {
-    font-style: italic;
-    color: #555;
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-style: italic;
     text-align: center;
   }
   
-  /* Table styles */
+  /* Table container */
   .table-container {
     overflow-x: auto;
+    margin-top: 10px;
   }
   
   .challenges-table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 12px;
-    font-size: 1.05rem;
+    border-collapse: collapse;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .challenges-table thead tr {
+    background-color: #004aad;
+    color: #fff;
+    text-align: left;
   }
   
   .challenges-table th,
   .challenges-table td {
-    padding: 15px 20px;
-    text-align: left;
-    vertical-align: middle;
-  }
-  
-  .challenges-table thead th {
-    background-color: #62c2b7;
-    color: white;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    border-radius: 10px 10px 0 0;
-    user-select: none;
+    padding: 15px 18px;
   }
   
   .challenges-table tbody tr {
-    background: white;
-    box-shadow: 0 4px 12px rgb(98 194 183 / 0.2);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-  }
-  
-  .challenges-table tbody tr:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgb(98 194 183 / 0.4);
-  }
-  
-  .challenges-table tbody td:first-child {
-    font-weight: 600;
-    color: #0a6170;
-    width: 40px;
-  }
-  
-  /* Enforcement content  */
-  .enforcement-content {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-  }
-  
-  .text-block {
-    background-color: #d9f0f0;
-    border-left: 7px solid #62c2b7;
-    padding: 1.2rem 1.8rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgb(98 194 183 / 0.15);
+    background: #f9fbff;
+    border-bottom: 1px solid #ddd;
     transition: background-color 0.3s ease;
   }
   
-  .text-block:hover {
-    background-color: #b1dedc;
+  .challenges-table tbody tr:nth-child(even) {
+    background: #eaf0ff;
+  }
+  
+  .challenges-table tbody tr:hover {
+    background-color: #d1defd;
+    cursor: default;
+  }
+  
+  /* Enforcement section text blocks */
+  .enforcement-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
   
   .text-block h3 {
-    color: #0a6170;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    color: #004aad;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+  }
+  
+  .text-block p {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.5;
   }
   
   /* Footer */
   .footer {
     text-align: center;
-    padding: 1.3rem 0;
-    font-size: 0.95rem;
-    color: #0a6170cc;
-    background: #d9f0f0;
-    box-shadow: inset 0 4px 6px #b1dedc88;
-    user-select: none;
-    margin-top: auto;
+    padding: 20px 0;
+    background: #004aad;
+    color: #f0f4ff;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 720px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 12px 20px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      margin-bottom: 10px;
+    }
+  
+    .privacy-container {
+      padding: 25px 20px;
+      margin: 20px 15px 40px;
+    }
+  
+    .main-title {
+      font-size: 2.2rem;
+    }
+  
+    .challenges-table th,
+    .challenges-table td {
+      padding: 12px 10px;
+    }
   }
   
