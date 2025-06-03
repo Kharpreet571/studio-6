@@ -1,0 +1,10 @@
+<nav>
+  <ul>
+    <li><a href="/" <%= (currentPage === 'home') ? 'class="active"' : '' %>><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="/introduction" <%= (currentPage === 'introduction') ? 'class="active"' : '' %>><i class="fas fa-info-circle"></i> Introduction</a></li>
+    <li><a href="/challenges" <%= (currentPage === 'challenges') ? 'class="active"' : '' %>><i class="fas fa-exclamation-triangle"></i> Challenges</a></li>
+    <li><a href="/privacy-act" <%= (currentPage === 'privacy-act') ? 'class="active"' : '' %>><i class="fas fa-gavel"></i> Privacy Act</a></li>
+    <li><a href="/gdpr" <%= (currentPage === 'gdpr') ? 'class="active"' : '' %>><i class="fas fa-globe-europe"></i> GDPR</a></li>
+    <li><a href="/conclusion" <%= (currentPage === 'conclusion') ? 'class="active"' : '' %>><i class="fas fa-flag-checkered"></i> Conclusion</a></li>
+  </ul>
+</nav>

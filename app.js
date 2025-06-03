@@ -16,13 +16,16 @@ app.get('/', function (req, res) {
     res.render("home", { title: 'Home' });
 });
 
-app.get('/introduction', function (req, res) {
-    res.render('introduction', { title: 'Introduction' });
+// Example route handler
+app.get('/introduction', (req, res) => {
+  res.render('introduction', { currentPage: 'introduction' });
 });
 
-app.get('/challenges', function (req, res) {
-    res.render('challenges', { title: 'Challenges' });
+app.get('/challenges', (req, res) => {
+  res.render('challenges', { currentPage: 'challenges' });
 });
+
+// And so on for other routes...
 
 app.get('/privacy-act', function (req, res) {
     res.render('privacy-act', { title: 'Privacy Act 2020' });
