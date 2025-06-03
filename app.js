@@ -1,13 +1,13 @@
-const express = require('express');
-const path = require('path'); // ✅ Make sure this is included
 
+const express = require('express');
+const path = require('path'); // Only declare this once at the top
 const app = express();
 
-const path = require('path');
-
-// Set views directory
+// Configure view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+// ... rest of your routes and middleware ...
 app.use('/public', express.static('public'));
 
 app.get('/test', (req, res) => {
