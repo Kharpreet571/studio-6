@@ -10,7 +10,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 
-
+app.get('/test', (req, res) => {
+  res.render('test', { currentPage: 'test' });
+});
 
 // Routing starts here
 app.get('/', function (req, res) {
