@@ -63,17 +63,7 @@ app.get('/conclusion', function (req, res) {
 app.get('/privacy', (req, res) => {
     res.render('privacy-act');
 });
-app.get('/gdpr', (req, res) => {
-    res.render('gdpr');
-});
 
-// Error handling for missing views
-app.use((err, req, res, next) => {
-    if (err.message.includes('Failed to lookup view')) {
-        return res.status(404).send('View not found');
-    }
-    next(err);
-});
 
 app.listen(process.env.port || 3000);
 console.log('Running at Port 3000');
