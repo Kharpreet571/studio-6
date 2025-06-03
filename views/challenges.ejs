@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Data Privacy Challenges</title>
+
+  <header>
+    <div class="container">
+<%- include('partials/navbar', {currentPage: 'challenges'}); %>    </div>
+  </header>
+
   
   <style>
     /* Reset */
@@ -217,18 +223,6 @@
   
 </head>
 <body>
-  <!-- ✅ Navbar -->
-  <nav class="navbar">
-    <div class="nav-logo">PrivacyAware</div>
-    <ul class="nav-links">
-      <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="/introduction" class="active"><i class="fas fa-info-circle"></i> Introduction</a></li>
-          <li><a href="/challenges"><i class="fas fa-exclamation-triangle"></i> Challenges</a></li>
-          <li><a href="/privacy-act"><i class="fas fa-gavel"></i> Privacy Act</a></li>
-          <li><a href="/gdpr"><i class="fas fa-globe-europe"></i> GDPR</a></li>
-          <li><a href="/conclusion"><i class="fas fa-flag-checkered"></i> Conclusion</a></li>
-    </ul>
-  </nav>
 
   <!-- ✅ Main Container -->
   <div class="privacy-container">
