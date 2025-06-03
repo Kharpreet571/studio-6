@@ -1,145 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Data Privacy</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-<style>
-  /* Reset */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Privacy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #f9fafb;
-    color: #121213;
-    line-height: 1.6;
-  }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #121213;
+      line-height: 1.6;
+    }
 
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
 
-  header {
-    background-color: #002287;
-    padding: 1.0rem 1rem;
-    color: #ecf0f1;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+    header {
+      background-color: #002287;
+      padding: 1.0rem 1rem;
+      color: #ecf0f1;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-  header h1 {
-    font-weight: 700;
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-  }
+    header h1 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
 
-  nav {
-    margin-top: 1rem;
-  }
+    nav {
+      margin-top: 1rem;
+    }
 
-  nav ul {
-    display: flex;
-    list-style: none;
-    gap: 1.8rem;
-  }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.8rem;
+    }
 
-  nav ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
+    nav ul li a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
 
-  nav ul li a:hover {
-    background-color: #418dda;
-  }
+    nav ul li a:hover {
+      background-color: #418dda;
+    }
 
-  main {
-    margin-top: 2rem;
-  }
+    main {
+      margin-top: 2rem;
+    }
 
-  main h2 {
-    font-size: 2.2rem;
-    color: #3e7ab7;
-    margin-bottom: 1rem;
-  }
+    main h2 {
+      font-size: 2.2rem;
+      color: #3e7ab7;
+      margin-bottom: 1rem;
+    }
 
-  main p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    max-width: 700px;
-  }
+    main p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      max-width: 700px;
+    }
 
-  main ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    max-width: 700px;
-    color: #34495e;
-    font-size: 1.1rem;
-  }
+    main ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      max-width: 700px;
+      color: #34495e;
+      font-size: 1.1rem;
+    }
 
-  main ul li {
-    margin-bottom: 0.7rem;
-  }
+    main ul li {
+      margin-bottom: 0.7rem;
+    }
 
-  footer {
-    margin-top: 0rem;
-    background-color: #010d92;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 0rem 0;
-    font-size: 0.6rem;
-    letter-spacing: 0px;
-  }
-</style>
+    footer {
+      margin-top: 0rem;
+      background-color: #010d92;
+      color: #ecf0f1;
+      text-align: center;
+      padding: 0rem 0;
+      font-size: 0.6rem;
+      letter-spacing: 0px;
+    }
+
+    /* Active link styling */
+    nav ul li a.active {
+      background-color: #418dda;
+      font-weight: 700;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container">
-     
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/introduction" class="active"><i class="fas fa-info-circle"></i> Introduction</a></li>
-          <li><a href="/challenges"><i class="fas fa-exclamation-triangle"></i> Challenges</a></li>
-          <li><a href="/privacy-act"><i class="fas fa-gavel"></i> Privacy Act</a></li>
-          <li><a href="/gdpr"><i class="fas fa-globe-europe"></i> GDPR</a></li>
-        </ul>
-      </nav>
+      <!-- Include navbar partial -->
+      <%- include('partials/navbar', {currentPage: 'home'}); %>
     </div>
   </header>
 
   <main class="container">
     <h2>Welcome to the Data Privacy</h2>
-    <main class="container">
-  
-  <p>In today's digital world, protecting personal data is more important than ever. This project explores key privacy principles, major regulations like GDPR and the Privacy Act 2020, and the challenges of ensuring data security.</p>
-  
-  <ul>
-    <li>Understand the importance of data privacy.</li>
-    <li>Explore global privacy regulations.</li>
-    <li>Learn how organizations protect personal information.</li>
-    <li>Discover best practices and solutions to common privacy challenges.</li>
-  </ul>
-
-  <p>Use the navigation above to explore different sections and dive deeper into the world of data privacy.</p>
-
+    <p>In today's digital world, protecting personal data is more important than ever. This project explores key privacy principles, major regulations like GDPR and the Privacy Act 2020, and the challenges of ensuring data security.</p>
+    
+    <ul>
+      <li>Understand the importance of data privacy.</li>
+      <li>Explore global privacy regulations.</li>
+      <li>Learn how organizations protect personal information.</li>
+      <li>Discover best practices and solutions to common privacy challenges.</li>
     </ul>
+
+    <p>Use the navigation above to explore different sections and dive deeper into the world of data privacy.</p>
   </main>
+
   <footer>
     <div class="container">
-      <p>© 2023 Data Privacy Project | All rights reserved</p>
+      <p>© 2025 Data Privacy | All rights reserved</p>
     </div>
   </footer>
 </body>

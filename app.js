@@ -15,10 +15,9 @@ app.get('/test', (req, res) => {
 });
 
 // Routing starts here
-app.get('/', function (req, res) {
-    res.render("home", { title: 'Home' });
+app.get('/', (req, res) => {
+  res.render('home', { currentPage: 'home' });
 });
-
 // Example route handler
 app.get('/introduction', (req, res) => {
   res.render('introduction', { currentPage: 'introduction' });
