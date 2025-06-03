@@ -60,6 +60,9 @@ app.get('/conclusion', function (req, res) {
     res.render('conclusion', { title: 'Conclusion' });
 });
 
+app.get('/privacy', (req, res) => {
+    res.render('privacy-act');
+});
 
 app.listen(process.env.port || 3000);
 console.log('Running at Port 3000');
