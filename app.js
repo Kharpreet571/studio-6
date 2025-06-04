@@ -23,11 +23,15 @@ app.get('/introduction', (req, res) => {
   res.render('introduction', { currentPage: 'introduction' });
 });
 
-app.get('/challenges', (req, res) => {
-  res.render('challenges', { currentPage: 'challenges' });
+// For the home route
+app.get('/', (req, res) => {
+  res.render('home', { activePage: 'home' });
 });
 
-// And so on for other routes...
+// For the challenges route
+app.get('/challenges', (req, res) => {
+  res.render('challenges', { activePage: 'challenges' });
+});
 
 app.get('/privacy-act', function (req, res) {
     res.render('privacy-act', { title: 'Privacy Act 2020' });

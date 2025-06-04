@@ -6,10 +6,17 @@
   <title>Data Privacy Challenges</title>
 
   <header>
-    <div class="container">
-<%- include('partials/navbar', {currentPage: 'challenges'}); %>    </div>
-  </header>
-
+  <div class="container">
+    <h1>Data Privacy</h1>
+    <nav>
+      <ul>
+        <li><a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">Home</a></li>
+        <li><a href="/challenges" class="<%= activePage === 'challenges' ? 'active' : '' %>">Challenges</a></li>
+        <!-- Add more navigation items as needed -->
+      </ul>
+    </nav>
+  </div>
+</header>
   
   <style>
     /* Reset */
