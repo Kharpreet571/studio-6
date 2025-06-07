@@ -26,20 +26,42 @@
     }
     header {
         background-color: rgb(245, 228, 245);
-        padding: 0.0rem 0rem;
-        color: #ecf0f1;
+        padding: 1rem 0;
+        color: #333;
         box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         position: sticky;
         top: 0;
         z-index: 100;
     }
-    header h1 {
-        font-weight: 700;
-        font-size: 1.8rem;
-        letter-spacing: 2px;
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
     }
-    nav {
-        margin-top: 2rem;
+    .nav-logo {
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #333;
+    }
+    .nav-links {
+        display: flex;
+        list-style: none;
+    }
+    .nav-links li {
+        margin-left: 2rem;
+    }
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+        color: #6c63ff;
     }
     :root {
       --primary: #6c63ff;
@@ -285,24 +307,34 @@
       .image-content {
         width: 100%;
       }
+      
+      .nav-links {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-        <div class="container">
-    <%- include('partials/navbar', {currentPage: 'home'}); %> </div>
+    <nav class="navbar">
+      <a href="/" class="nav-logo">Data Privacy Hub</a>
+      <ul class="nav-links">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/introduction">Introduction</a></li>
+        <li><a href="/guidance">Guidance</a></li>
+        <li><a href="/privacy-laws">Privacy Laws</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section class="hero">
     <div class="hero-content">
-      
       <h1>Understand your rights and learn how organizations should handle your personal information in the digital age.</h1>
       <a href="#learn-more" class="btn">Learn About Your Rights</a>
     </div>
   </section>
 
-  
   <section class="container">
     <div class="image-section">
       <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Data privacy concept">
@@ -343,7 +375,6 @@
       </div>
       
       <div class="footer-section">
-       
         <ul>
           <li><a href="mailto:info@dataprivacyhub.nz">info@dataprivacyhub.nz</a></li>
           <li><a href="#">Privacy Policy</a></li>
