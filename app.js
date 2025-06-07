@@ -14,10 +14,10 @@ app.get('/test', (req, res) => {
   res.render('test', { currentPage: 'test' });
 });
 
-// Routing starts here
-app.get('/', (req, res) => {
-  res.render('home', { currentPage: 'home' });
+app.get('/home', (req, res) => {
+  res.render('home'); // Looks for 'home.ejs' in /views
 });
+
 // Example route handler
 app.get('/introduction', (req, res) => {
   res.render('introduction', { currentPage: 'introduction' });
