@@ -25,19 +25,9 @@ app.get('/introduction', (req, res) => {
 app.get('/guidance', (req, res) => {
   res.render('guidance'); // assumes there's a guidance.ejs in the views folder
 });
-
-
-
-// For the home route
-app.get('/', (req, res) => {
-  res.render('home', { activePage: 'home' });
+app.get('/privacy-laws', (req, res) => {
+  res.render('privacy-laws'); // This looks for views/privacy-laws.ejs
 });
-
-
-app.get('/privacy-act', function (req, res) {
-    res.render('privacy-act', { title: 'Privacy Act 2020' });
-});
-
 
 app.listen(process.env.port || 3000);
 console.log('Running at Port 3000');
