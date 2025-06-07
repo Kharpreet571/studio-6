@@ -27,6 +27,7 @@ app.get('/guidance', (req, res) => {
 });
 
 
+
 // For the home route
 app.get('/', (req, res) => {
   res.render('home', { activePage: 'home' });
