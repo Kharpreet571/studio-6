@@ -3,35 +3,357 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Introduction - Data Privacy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <title>Data Privacy Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --primary: #6c63ff;
+      --secondary: #4fd1c5;
+      --dark: #2d3748;
+      --light: #f7fafc;
+      --white: #ffffff;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 5rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+      opacity: 0.15;
+      z-index: 0;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: var(--white);
+      color: var(--primary);
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    
+    .features {
+      padding: 5rem 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+    
+    .section-title p {
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .feature-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+    
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    
+    .feature-card p {
+      color: #666;
+    }
+    
+    .image-section {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin: 5rem 0;
+    }
+    
+    .image-section img {
+      width: 50%;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .image-content {
+      width: 50%;
+    }
+    
+    .image-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark);
+    }
+    
+    .cta {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      text-align: center;
+      padding: 5rem 0;
+      margin-top: 3rem;
+    }
+    
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    footer {
+      background-color: var(--dark);
+      color: var(--light);
+      padding: 3rem 0 1rem;
+      text-align: center;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-section h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer-section ul li a {
+      color: var(--light);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-section ul li a:hover {
+      color: var(--secondary);
+    }
+    
+    .copyright {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .image-section {
+        flex-direction: column;
+      }
+      
+      .image-section img,
+      .image-content {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <%- include('partials/navbar', {currentPage: 'introduction'}); %>
-    </div>
+    <%- include('partials/navbar', {currentPage: 'home'}); %>
   </header>
 
-
-  <main class="container">
-    <h2>Introduction to Data Privacy</h2>
-
-    <div class="key-points">
-      <ul>
-        <li>In the 21st century, data privacy stands as a critical pillar of digital trust, decisively shaping how personal information is collected, processed, and secured (Kuye, 2023).</li>
-        <li>With the explosive growth of data-driven technologies—ranging from social media to artificial intelligence—individuals and organizations are confronted with significant challenges in safeguarding sensitive data (Liu, 2018).</li>
-        <li>According to Torre, Alferez, Soltana, Sabetzadeh, & Briand (2020), global regulatory frameworks like the GDPR and New Zealand's Privacy Act 2020 aim to harmonize innovation with ethical data practices.</li>
-        <li>This project investigates the technical, legal, and strategic dimensions of data privacy to provide actionable solutions for stakeholders.</li>
-      </ul>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Protecting Your Digital Footprint</h1>
+      <p>Understand your rights and learn how organizations should handle your personal information in the digital age.</p>
+      <a href="#learn-more" class="btn">Learn About Your Rights</a>
     </div>
-  </main>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Data Privacy Matters</h2>
+        <p>In today's interconnected world, protecting personal information is more important than ever.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Your Rights Protected</h3>
+          <p>Learn about privacy laws that give you control over how your personal data is collected and used.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3>Business Compliance</h3>
+          <p>Organizations must follow strict guidelines to protect customer information under privacy laws.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Secure Your Data</h3>
+          <p>Practical steps you can take to safeguard your personal information online and offline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="image-section">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Data privacy concept">
+      <div class="image-content">
+        <h2>New Zealand Privacy Act 2020</h2>
+        <p>The Privacy Act 2020 regulates how organizations collect, use, store and disclose personal information in New Zealand. It establishes 13 privacy principles that organizations must comply with when handling personal data.</p>
+        <p>Key aspects include mandatory breach notification, increased fines for non-compliance, and requirements for cross-border data transfers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="learn-more">
+    <div class="container">
+      <h2>Ready to Take Control of Your Data Privacy?</h2>
+      <p>Explore our resources to understand your rights and learn how organizations should protect your information.</p>
+      <a href="/introduction" class="btn">Get Started</a>
+    </div>
+  </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Data Privacy. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/introduction">Introduction</a></li>
+          <li><a href="/privacy-laws">Privacy Laws</a></li>
+          <li><a href="/rights">Your Rights</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#">Privacy Tips</a></li>
+          <li><a href="#">Compliance Guide</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:info@dataprivacyhub.nz">info@dataprivacyhub.nz</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2025 Data Privacy Hub. All rights reserved.</p>
     </div>
   </footer>
 </body>
