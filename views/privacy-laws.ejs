@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Data Privacy Hub</title>
+  <title>Privacy Laws - Data Privacy Hub</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
@@ -195,6 +195,27 @@
       background-color: #f8f9fa;
     }
     
+    .two-column-block {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .column {
+      flex: 1;
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+    }
+    
+    .column h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+    
     footer {
       background-color: var(--dark);
       color: var(--light);
@@ -267,6 +288,10 @@
       .comparison-table {
         display: block;
         overflow-x: auto;
+      }
+      
+      .two-column-block {
+        flex-direction: column;
       }
     }
   </style>
@@ -395,6 +420,46 @@
         </div>
       </section>
       
+      <!-- Retention Requirements Section -->
+      <section class="section-block">
+        <h2>Retention Requirements</h2>
+        
+        <div class="two-column-block">
+          <!-- Medical Records Column -->
+          <div class="column">
+            <h3><i class="fas fa-file-medical"></i> Medical Records</h3>
+            <div class="definition-box">
+              <p>The Health Information Privacy Code requires health agencies to keep medical information only as long as there is a legal purpose.</p>
+            </div>
+            
+            <div class="key-points">
+              <ul>
+                <li><i class="fa-icon fas fa-calendar"></i> <strong>10 years</strong> from last service provided (Health (Retention of Health Information) Regulations 1996)</li>
+                <li><i class="fa-icon fas fa-exclamation"></i> Does not apply if files transferred to patient/executor</li>
+                <li><i class="fa-icon fas fa-landmark"></i> Public Records Act 2005 specifies retention for public sector health agencies</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Employee Information Column -->
+          <div class="column">
+            <h3><i class="fas fa-briefcase"></i> Employee Information</h3>
+            <div class="definition-box">
+              <p>Retention periods vary based on data type and specific legal requirements.</p>
+            </div>
+            
+            <div class="key-points">
+              <ul>
+                <li><i class="fa-icon fas fa-clock"></i> Time and wage documentation have specific legal retention periods</li>
+                <li><i class="fa-icon fas fa-file-invoice-dollar"></i> Tax information has separate requirements</li>
+                <li><i class="fa-icon fas fa-user-md"></i> Health information (if health services provided) follows medical records rules</li>
+                <li><i class="fa-icon fas fa-clipboard-list"></i> Employers should maintain clear record-keeping policies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <!-- Privacy Rights Section -->
       <section class="section-block">
         <h2>Key Privacy Rights and Obligations</h2>
@@ -419,34 +484,6 @@
         
         <div class="quote-box">
           <p>"Companies prioritizing transparency build customer trust and brand loyalty, while non-compliance can result in massive fines (up to 4% of global revenue under GDPR) and reputational damage."</p>
-        </div>
-      </section>
-      
-      <!-- Principle 9 Section -->
-      <section class="section-block">
-        <h2>Principle 9 - Retention of Personal Information</h2>
-        
-        <div class="definition-box">
-          <p>Businesses should only retain data as long as required for authorized purposes.</p>
-        </div>
-        
-        <h3>Retention Requirements</h3>
-        <div class="key-points">
-          <ul>
-            <li><i class="fa-icon fas fa-balance-scale"></i> No minimum timeframes - retain only as long as needed</li>
-            <li><i class="fa-icon fas fa-book"></i> Other laws may mandate specific retention periods</li>
-            <li><i class="fa-icon fas fa-file-contract"></i> Clear retention policies are essential</li>
-          </ul>
-        </div>
-        
-        <div class="definition-box">
-          <h3>Medical Records</h3>
-          <p>Health records must be kept for 10 years from last service (Health Information Privacy Code).</p>
-        </div>
-        
-        <div class="definition-box">
-          <h3>Employee Information</h3>
-          <p>Retention periods vary based on data type and specific legal requirements.</p>
         </div>
       </section>
       
