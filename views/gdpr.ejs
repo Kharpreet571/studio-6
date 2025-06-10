@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GDPR - Data Privacy Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #f9fafb;
+        color: #121213;
+        line-height: 1.6;
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    header {
+        background-color: rgb(245, 228, 245);
+        padding: 1rem 0;
+        color: #333;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    .nav-logo {
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #333;
+    }
+    .nav-links {
+        display: flex;
+        list-style: none;
+    }
+    .nav-links li {
+        margin-left: 2rem;
+    }
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+        color: #6c63ff;
+    }
+    :root {
+      --primary: #6c63ff;
+      --secondary: #4fd1c5;
+      --dark: #2d3748;
+      --light: #f7fafc;
+      --white: #ffffff;
+    }
+    
+    .content-section {
+      padding: 3rem 0;
+    }
+    
+    .content-section h2 {
+      font-size: 2.5rem;
+      color: var(--dark);
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+    
+    .content-section h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin: 2rem 0 1rem;
+    }
+    
+    .section-block {
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .definition-box {
+      background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(79, 209, 197, 0.1) 100%);
+      border-left: 4px solid var(--primary);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .quote-box {
+      background: linear-gradient(135deg, rgba(247, 37, 133, 0.05) 0%, rgba(76, 201, 240, 0.05) 100%);
+      border-left: 4px solid var(--secondary);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      position: relative;
+    }
+    
+    .quote-box::before {
+      content: '"';
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      font-size: 3rem;
+      color: var(--secondary);
+      opacity: 0.2;
+    }
+    
+    .key-points {
+      margin: 1.5rem 0;
+    }
+    
+    .key-points ul {
+      list-style: none;
+    }
+    
+    .key-points li {
+      background: var(--white);
+      padding: 1.2rem;
+      margin-bottom: 0.8rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      position: relative;
+      padding-left: 3rem;
+      border-left: 3px solid var(--primary);
+    }
+    
+    .key-points li:before {
+      content: '';
+      position: absolute;
+      left: 1rem;
+      top: 1.5rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+    
+    .key-points .fa-icon {
+      position: absolute;
+      left: 1rem;
+      top: 1.3rem;
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    
+    .standard-list {
+      list-style-type: disc;
+      padding-left: 1.8rem;
+      margin: 1.2rem 0;
+    }
+    
+    .standard-list li {
+      margin-bottom: 0.7rem;
+      padding-left: 0.5rem;
+    }
+    
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .comparison-table th {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem;
+      text-align: left;
+    }
+    
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .comparison-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .two-column-block {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .column {
+      flex: 1;
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+    }
+    
+    .column h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+    
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .right-card {
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      border-top: 4px solid var(--primary);
+    }
+    
+    .right-card h4 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    footer {
+      background-color: var(--dark);
+      color: var(--light);
+      padding: 3rem 0 1rem;
+      text-align: center;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-section h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer-section ul li a {
+      color: var(--light);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-section ul li a:hover {
+      color: var(--secondary);
+    }
+    
+    .copyright {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .content-section h2 {
+        font-size: 2rem;
+      }
+      
+      .content-section h3 {
+        font-size: 1.5rem;
+      }
+      
+      .key-points li {
+        padding: 1rem;
+        padding-left: 2.5rem;
+      }
+      
+      .comparison-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      .two-column-block {
+        flex-direction: column;
+      }
+      
+      .rights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="/" class="nav-logo">Data Privacy Hub</a>
+      <ul class="nav-links">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/introduction">Introduction</a></li>
+        <li><a href="/guidance">Guidance</a></li>
+        <li><a href="/privacy-laws">Privacy Laws</a></li>
+        <li><a href="/gdpr">GDPR</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content-section">
+    <div class="container">
+      <!-- GDPR Overview Section -->
+      <section class="section-block">
+        <h2>General Data Protection Regulation (GDPR)</h2>
+        
+        <div class="definition-box">
+          <p>According to Danny Palmer (2019), a Senior Writer, the <strong>General Data Protection Regulation (GDPR)</strong> is an EU regulation that took effect on May 25, 2018. It enhances the existing data protection framework by replacing the 1995 Data Protection Directive.</p>
+        </div>
+        
+        <p>The GDPR aims to provide EU citizens with greater control over their personal data while simplifying the legal requirements for businesses. Its goal is to ensure that both individuals and companies in the EU can take advantage of the digital economy.</p>
+        
+        <div class="quote-box">
+          <p>These reforms modernize data protection laws to keep pace with today's internet-driven world. Nearly every aspect of daily life involves data, from social media and banking to retail and government services.</p>
+        </div>
+      </section>
+
+      <!-- Importance for NZ Companies Section -->
+      <section class="section-block">
+        <h3>Why is GDPR Important for New Zealand Companies?</h3>
+        
+        <div class="key-points">
+          <ul>
+            <li><i class="fa-icon fas fa-globe-europe"></i> <strong>Global Compliance</strong> - EU partners assess NZ companies' GDPR readiness as all affected organizations must comply</li>
+            <li><i class="fa-icon fas fa-exchange-alt"></i> <strong>Legal Requirement</strong> - GDPR is legally binding, replacing the previous non-binding EU directive</li>
+            <li><i class="fa-icon fas fa-exclamation-triangle"></i> <strong>Severe Penalties</strong> - Fines up to 4% of global turnover or €20 million (whichever is higher)</li>
+          </ul>
+        </div>
+        
+        <div class="quote-box">
+          <p>"The EU partners will actively assess the readiness of New Zealand companies for GDPR compliance... Companies that fail to comply may face severe penalties." (New Zealand Trade and Enterprise, 2017)</p>
+        </div>
+      </section>
+      
+      <!-- Affecting NZ Businesses Section -->
+      <section class="section-block">
+        <h3>How Does the GDPR Affect My New Zealand Business?</h3>
+        
+        <div class="definition-box">
+          <p>To ensure full compliance with GDPR, it is essential for businesses to actively engage in two crucial processes. Taking these steps will not only protect the organization but also build trust with customers. (Blythe Dingwall, 2023)</p>
+        </div>
+        
+        <div class="two-column-block">
+          <div class="column">
+            <h3><i class="fas fa-question-circle"></i> How and why does business currently process data?</h3>
+            <ul class="standard-list">
+              <li>Must secure explicit, informed, and unambiguous consent</li>
+              <li>Limited to using data solely for outlined purposes</li>
+              <li>Requires solid legal foundation for data processing</li>
+              <li>Non-compliance leads to significant penalties</li>
+            </ul>
+          </div>
+          
+          <div class="column">
+            <h3><i class="fas fa-cogs"></i> What processes can be implemented?</h3>
+            <ul class="standard-list">
+              <li>Allow individuals to access their personal data</li>
+              <li>Correct any inaccuracies in that data</li>
+              <li>Erase data when no longer necessary</li>
+              <li>Promptly report any data breaches</li>
+              <li>Consider appointing a Data Protection Officer</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Compliance Checklist Section -->
+      <section class="section-block">
+        <h2>GDPR Compliance Checklist for Organizations</h2>
+        
+        <div class="definition-box">
+          <p>The GDPR emphasizes that data processors must robustly adhere to lawful bases, uphold transparency in data handling, and implement rigorous data security practices. They are also responsible for defining accountability and governance structures while safeguarding the privacy rights of individuals.</p>
+        </div>
+        
+        <p>Here's an impactful 12-step GDPR checklist for 2025: (Vora, 2024)</p>
+        
+        <div class="key-points">
+          <ul>
+            <li><i class="fa-icon fas fa-check-square"></i> Conduct comprehensive data audits and mapping</li>
+            <li><i class="fa-icon fas fa-check-square"></i> Establish lawful basis for all data processing activities</li>
+            <li><i class="fa-icon fas fa-check-square"></i> Implement robust consent management processes</li>
+            <li><i class="fa-icon fas fa-check-square"></i> Develop clear privacy notices and policies</li>
+            <li><i class="fa-icon fas fa-check-square"></i> Create procedures for data subject rights requests</li>
+            <li><i class="fa-icon fas fa-check-square"></i> Implement data protection by design and default</li>
+            <li><i class="fa-icon fas fa-check-square"></i> Establish data breach response protocols</li>
+            <li><i class="fa-icon fas fa-check-square"></i> Conduct Data Protection Impact Assessments (DPIAs)</li>
+            <li><i class="fa-icon fas fa-check-square"></i> Appoint a Data Protection Officer if required</li>
+            <li><i class="fa-icon fas fa-check-square"></i> Implement appropriate security measures</li>
+            <li><i class="fa-icon fas fa-check-square"></i> Establish international data transfer mechanisms</li>
+            <li><i class="fa-icon fas fa-check-square"></i> Conduct regular staff training and awareness programs</li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- Rights for Individuals Section -->
+      <section class="section-block">
+        <h2>Rights for Individuals Under GDPR: A Breakdown</h2>
+        
+        <div class="definition-box">
+          <p>According to Strickler (2022), GDPR protects the privacy and personal data of EU citizens by regulating how personal data is processed, stored, and destroyed. This includes obvious information like names and locations, as well as details like IP addresses and cookie identifiers.</p>
+        </div>
+        
+        <div class="rights-grid">
+          <!-- Right 1 -->
+          <div class="right-card">
+            <h4><i class="fas fa-info-circle"></i> Right to Information</h4>
+            <p>Customers have the right to know what personal information organizations are collecting about them, why it's being collected, who is processing it, and how long it will be retained.</p>
+          </div>
+          
+          <!-- Right 2 -->
+          <div class="right-card">
+            <h4><i class="fas fa-key"></i> Right to Access</h4>
+            <p>Users have the right to access personal data held by a company. The GDPR mandates a standardized method for receiving and fulfilling these requests.</p>
+          </div>
+          
+          <!-- Right 3 -->
+          <div class="right-card">
+            <h4><i class="fas fa-edit"></i> Right to Rectification</h4>
+            <p>Allows customers to request changes to inaccurate or outdated personal data. Companies have one month to respond to these requests.</p>
+          </div>
+          
+          <!-- Right 4 -->
+          <div class="right-card">
+            <h4><i class="fas fa-eraser"></i> Right to be Forgotten</h4>
+            <p>Allows individuals to request deletion when data is no longer necessary, consent is withdrawn, or data is unlawfully processed.</p>
+          </div>
+          
+          <!-- Right 5 -->
+          <div class="right-card">
+            <h4><i class="fas fa-pause"></i> Right to Restriction of Processing</h4>
+            <p>Individuals may request that an organization limit the use of their personal information in specific circumstances.</p>
+          </div>
+          
+          <!-- Right 6 -->
+          <div class="right-card">
+            <h4><i class="fas fa-ban"></i> Right to Object to Processing</h4>
+            <p>Individuals have the right to object to the processing of their personal data at any time, in specific cases.</p>
+          </div>
+          
+          <!-- Right 7 -->
+          <div class="right-card">
+            <h4><i class="fas fa-database"></i> Right to Data Portability</h4>
+            <p>Entitles data subjects to seek their personal information in a standard, machine-readable format for reuse across services.</p>
+          </div>
+          
+          <!-- Right 8 -->
+          <div class="right-card">
+            <h4><i class="fas fa-robot"></i> Right Regarding Automated Decision-Making</h4>
+            <p>Individuals must be told when their data will be used for automated decision-making and have the choice to opt out.</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- GDPR and NZ Relationship Section -->
+      <section class="section-block">
+        <h2>The GDPR and NZ: Why This Relationship is Important</h2>
+        
+        <div class="definition-box">
+          <p>This discusses the GDPR's rising global impact and how it affects data privacy practices in New Zealand. The goal is to create awareness and advise businesses in ensuring compliance with both local and international privacy legislation.</p>
+        </div>
+        
+        <h3>GDPR's Global Reach</h3>
+        <p>Although GDPR is a European Union regulation, its extraterritorial nature means it has global consequences. Companies outside the EU, including those in New Zealand, must comply if they handle EU individuals' data.</p>
+        
+        <h3>Notable Cases and Financial Impact</h3>
+        <div class="key-points">
+          <ul>
+            <li><i class="fa-icon fas fa-search-dollar"></i> <strong>Google</strong> was fined €50 million in 2019 for non-transparent data practices</li>
+            <li><i class="fa-icon fas fa-plane"></i> <strong>British Airways</strong> experienced a data breach affecting 400,000 users</li>
+            <li><i class="fa-icon fas fa-chart-line"></i> 27% of organisations paid more than $500,000 to achieve GDPR compliance</li>
+          </ul>
+        </div>
+        
+        <div class="quote-box">
+          <p>"It contributes to legal compliance, trust, and personal data protection in an increasingly digital society."</p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/introduction">Introduction</a></li>
+          <li><a href="/guidance">Guidance</a></li>
+          <li><a href="/privacy-laws">Privacy Laws</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#">GDPR Guide</a></li>
+          <li><a href="#">Compliance Checklist</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:info@dataprivacyhub.nz">info@dataprivacyhub.nz</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2025 Data Privacy Hub. All rights reserved.</p>
+      <p><i class="fas fa-info-circle"></i> This content is provided for educational purposes only.</p>
+    </div>
+  </footer>
+</body>
+</html>
