@@ -3,16 +3,6 @@ const express = require('express');
 const path = require('path'); // Only declare this once at the top
 const app = express();
 
-// routes/gdpr.js
-const express = require('express');
-const somethingElse = require('some-module');  // <--- might be the problem
-const router = express.Router();
-
-router.get('/', (req, res) => {
-  res.send('This is the GDPR compliance page.');
-});
-
-module.exports = router;
 
 
 // Configure view engine
@@ -41,12 +31,12 @@ app.get('/privacy-laws', (req, res) => {
   res.render('privacy-laws'); // This looks for views/privacy-laws.ejs
 });
 app.get('/gdpr', (req, res) => {
-  res.send('This is the GDPR compliance page.');
+  res.render('gdpr', { currentPage: 'gdpr' }); // This will render views/gdpr.ejs
 });
-
-const gdprRouter = require('./routes/gdpr');
-app.use('/gdpr', gdprRouter);
+app.get('/gdpr', (req, res) => {
+  res.send('gdpr');
+});
 
 
 app.listen(process.env.port || 3000);
-console.log('Running at Port 3000');node
+console.log('Running at Port 3000');
