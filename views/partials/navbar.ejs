@@ -1,9 +1,14 @@
-<nav>
-  <ul>
-    <li><a href="/" <%= (currentPage === 'home') ? 'class="active"' : '' %>><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="/introduction" <%= (currentPage === 'introduction') ? 'class="active"' : '' %>><i class="fas fa-info-circle"></i> Introduction</a></li>
-    <li><a href="/guidance" <%= (currentPage === 'guidance') ? 'class="active"' : '' %>><i class="fas fa-exclamation-triangle"></i> Guidance</a></li>
-    <li><a href="/privacy-act" <%= (currentPage === 'privacy-act') ? 'class="active"' : '' %>><i class="fas fa-gavel"></i> Privacy Act</a></li>
-    <li><a href="/gdpr" <%= (currentPage === 'gdpr') ? 'class="active"' : '' %>><i class="fas fa-globe-europe"></i> GDPR</a></li>
-  </ul>
-</nav>
+<header>
+  <h1>Data Privacy Hub</h1>
+  <nav>
+    <ul>
+      <li><a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">Home</a></li>
+      <li><a href="/about" class="<%= activePage === 'about' ? 'active' : '' %>">About</a></li>
+      <li><a href="/laws" class="<%= activePage === 'laws' ? 'active' : '' %>">Laws</a></li>
+      <li><a href="/issues" class="<%= activePage === 'issues' ? 'active' : '' %>">Issues</a></li>
+      <li><a href="/stakeholders" class="<%= activePage === 'stakeholders' ? 'active' : '' %>">Stakeholders</a></li>
+      <li><a href="/solutions" class="<%= activePage === 'solutions' ? 'active' : '' %>">Solutions</a></li>
+    
+    </ul>
+  </nav>
+</header>

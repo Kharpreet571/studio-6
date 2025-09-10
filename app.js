@@ -1,45 +1,39 @@
 const express = require('express');
-const path = require('path');
 const app = express();
+const path = require('path');
 
-// Configure view engine
-app.set('views', path.join(__dirname, 'views'));
+// Set EJS as the view engine
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-// Serve static files from 'public' directory
-app.use('/public', express.static('public'));
+// Serve static files
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Define your routes
+// Routes
 app.get('/', (req, res) => {
-  res.render('home'); // Render home.ejs when accessing root URL
+  res.render('home'); // renders views/home.ejs
 });
 
-app.get('/test', (req, res) => {
-  res.render('test', { currentPage: 'test' });
+app.get('/about', (req, res) => {
+  res.render('about'); // renders views/about.ejs
 });
 
-app.get('/home', (req, res) => {
-  res.render('home'); // Alternative route to home
+app.get('/laws', (req, res) => {
+  res.render('laws');
 });
 
-app.get('/introduction', (req, res) => {
-  res.render('introduction', { currentPage: 'introduction' });
+app.get('/issues', (req, res) => {
+  res.render('issues');
 });
 
-app.get('/guidance', (req, res) => {
-  res.render('guidance');
+app.get('/stakeholders', (req, res) => {
+  res.render('stakeholders');
 });
 
-app.get('/privacy-laws', (req, res) => {
-  res.render('privacy-laws');
-});
-
-app.get('/gdpr', (req, res) => {
-  res.render('gdpr', { currentPage: 'gdpr' }); // Removed duplicate page
+app.get('/solutions', (req, res) => {
+  res.render('solutions');
 });
 
 // Start server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
