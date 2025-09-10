@@ -35,7 +35,7 @@ app.get('/privacy-laws', (req, res) => {
 });
 
 app.get('/gdpr', (req, res) => {
-  res.render('gdpr', { currentPage: 'gdpr' }); // Removed duplicate route
+  res.render('gdpr', { currentPage: 'gdpr' }); // Removed duplicate page
 });
 
 // Start server
