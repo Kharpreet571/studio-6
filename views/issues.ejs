@@ -1,53 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Privacy Hub - Issues</title>
-  <link rel="stylesheet" href="/style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <header>
-    <h1>Data Privacy Hub</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/laws">Laws</a></li>
-        <li><a href="/issues" class="active">Issues</a></li>
-        <li><a href="/stakeholders">Stakeholders</a></li>
-        <li><a href="/solutions">Solutions</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="privacy-container">
-    <h2>Challenges & Issues in Data Privacy</h2>
-
-    <div class="challenge-card">
-      <h3>Unauthorized Access</h3>
-      <p>Students’ data can be accessed by unauthorized staff or third parties.</p>
-    </div>
-
-    <div class="challenge-card">
-      <h3>Data Breaches</h3>
-      <p>Cyber attacks or system failures can expose sensitive information.</p>
-    </div>
-
-    <div class="challenge-card">
-      <h3>Lack of Awareness</h3>
-      <p>Many students and staff are unaware of privacy policies and laws.</p>
-    </div>
-
-    <div class="challenge-card">
-      <h3>Cross-Border Data Transfer</h3>
-      <p>Transferring data internationally may violate local privacy laws.</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Data Privacy Hub. All Rights Reserved.</p>
-  </footer>
-</body>
-</html>
+<%- include('partials/header') %>
+    <section class="content">
+        <h1>Data Privacy Challenges in Education</h1>
+        
+        <h2>Common Issues in Educational Settings</h2>
+        <ul>
+            <li>Lack of transparency in educational data collection</li>
+            <li>Cloud storage risks with student information</li>
+            <li>Inconsistent data protection across educational platforms</li>
+            <li>Increasing frequency of educational data breaches</li>
+            <li>Excessive retention of student records beyond necessary periods</li>
+            <li>Privacy challenges from educational technology (EdTech)</li>
+        </ul>
+        
+        <h2>Educational Data Breaches</h2>
+        <ul>
+            <li>Unauthorized access to student information systems</li>
+            <li>Potential for serious harm including academic identity theft</li>
+            <li>Requirement to report breaches involving student data</li>
+            <li>Special sensitivity of minors' information in breaches</li>
+        </ul>
+        
+        <h2>Student-Specific Privacy Concerns</h2>
+        <ul>
+            <li>Educational apps collecting excessive personal data</li>
+            <li>Learning management systems tracking student behavior</li>
+            <li>Sharing student data with third-party educational services</li>
+            <li>Online proctoring software privacy issues</li>
+            <li>Long-term storage of digital learning analytics</li>
+        </ul>
+        
+        <h2>Recruitment Agency Case Study</h2>
+        <p>A recruitment agency failed to remove all personal information from an old online profile, highlighting the importance of complete data deletion, especially for students entering the job market.</p>
+    </section>
+<%- include('partials/footer') %>
