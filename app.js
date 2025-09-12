@@ -38,10 +38,10 @@ app.get('/law', (req, res) => {
     res.render('privacy-laws'); 
 });
 
-// Issue page
-app.get('/issue', (req, res) => {
-    res.render('issues'); // matches issues.ejs
+app.get('/issues', (req, res) => {
+    res.render('issues');  // this must match your EJS filename
 });
+
 
 
 // Stakeholders page
