@@ -1,53 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Privacy Hub - Stakeholders</title>
-  <link rel="stylesheet" href="/style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <header>
-    <h1>Data Privacy Hub</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/laws">Laws</a></li>
-        <li><a href="/issues">Issues</a></li>
-        <li><a href="/stakeholders" class="active">Stakeholders</a></li>
-        <li><a href="/solutions">Solutions</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="privacy-container">
-    <h2>Key Stakeholders</h2>
-
-    <div class="definition-box">
-      <h3>Students</h3>
-      <p>Primary owners of personal data. Their privacy rights must be protected by institutions.</p>
-    </div>
-
-    <div class="definition-box">
-      <h3>Educators & Staff</h3>
-      <p>Responsible for collecting, processing, and securing student information.</p>
-    </div>
-
-    <div class="definition-box">
-      <h3>Institutions</h3>
-      <p>Schools, colleges, and universities that must comply with privacy laws and implement policies.</p>
-    </div>
-
-    <div class="definition-box">
-      <h3>Regulatory Authorities</h3>
-      <p>Organizations or government bodies ensuring compliance with privacy laws like GDPR or local regulations.</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Data Privacy Hub. All Rights Reserved.</p>
-  </footer>
-</body>
-</html>
+<%- include('partials/header') %>
+    <section class="content">
+        <h1>Key Stakeholders in Educational Data Privacy</h1>
+        
+        <h2>Students</h2>
+        <ul>
+            <li>Right to control educational personal information</li>
+            <li>Responsibility to practice good security habits with academic accounts</li>
+            <li>Ability to exercise privacy rights under educational privacy laws</li>
+            <li>Vulnerability as often less experienced with data privacy issues</li>
+        </ul>
+        
+        <h2>Educational Institutions</h2>
+        <ul>
+            <li>Legal obligation to protect student data under FERPA, GDPR, etc.</li>
+            <li>Need to implement privacy-by-design in educational systems</li>
+            <li>Responsibility to report breaches involving student information</li>
+            <li>Balancing educational needs with privacy protection</li>
+        </ul>
+        
+        <h2>Parents and Guardians</h2>
+        <ul>
+            <li>Right to access children's educational records (for minors)</li>
+            <li>Responsibility to understand educational privacy policies</li>
+            <li>Role in providing consent for data processing</li>
+            <li>Advocacy for children's privacy rights</li>
+        </ul>
+        
+        <h2>Educational Technology Providers</h2>
+        <ul>
+            <li>Responsibility to secure educational platforms</li>
+            <li>Need for transparent data practices with educational institutions</li>
+            <li>Compliance with educational privacy regulations</li>
+            <li>Ethical use of student learning analytics</li>
+        </ul>
+        
+        <h2>Regulators and Government Agencies</h2>
+        <ul>
+            <li>Enforcement of educational privacy laws</li>
+            <li>Guidance on compliance requirements for schools</li>
+            <li>Handling of educational privacy complaints</li>
+            <li>Limited information sharing under specific circumstances</li>
+        </ul>
+    </section>
+<%- include('partials/footer') %>
