@@ -28,15 +28,11 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
-// Privacy Laws page
-app.get('/privacy-laws', (req, res) => {
-    res.render('privacy-laws');
+app.get('/privacy-law', (req, res) => {
+    res.render('privacy-law'); // make sure the file name matches views/privacy-law.ejs
 });
 
-// Optional alias for /law URL
-app.get('/law', (req, res) => {
-    res.render('privacy-laws'); 
-});
+
 
 app.get('/issues', (req, res) => {
     res.render('issues');  // this must match your EJS filename
