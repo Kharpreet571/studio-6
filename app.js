@@ -45,10 +45,10 @@ app.get('/stakeholders', (req, res) => {
     res.render('stakeholders');
 });
 
-// Solution page
-app.get('/solution', (req, res) => {
-    res.render('solution');
+app.get('/solutions', (req, res) => {
+    res.render('solutions');  // no .ejs needed
 });
+
 
 // ------------------------------
 // Handle 404 errors
