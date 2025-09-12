@@ -4,8 +4,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Privacy Hub - Home</title>
-<link rel="stylesheet" href="/css/style.css">
-
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --success-color: #27ae60;
+            --text-color: #333;
+            --text-light: #777;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo h2 {
+            color: white;
+            font-weight: 700;
+        }
+        
+        .nav-menu {
+            display: flex;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.2rem;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .cta-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            flex: 1;
+            min-width: 200px;
+            margin: 0.5rem;
+        }
+        
+        .stat-card h3 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Project Overview */
+        .project-overview {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+        }
+        
+        .project-overview h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .project-overview h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .project-overview p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .project-overview ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-overview li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .project-overview li:before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-menu {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+            
+            .stat-card {
+                margin: 0.5rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -33,7 +250,20 @@
             <button class="cta-button">Learn About Your Rights</button>
         </section>
 
-
+        <section class="stats">
+            <div class="stat-card">
+                <h3>0.78</h3>
+                <p>Source Rate (LUX)</p>
+            </div>
+            <div class="stat-card">
+                <h3>2.7Mpvs</h3>
+                <p>Sessions (LUX)</p>
+            </div>
+            <div class="stat-card">
+                <h3>40.6%</h3>
+                <p>Conversion Rate</p>
+            </div>
+        </section>
 
         <section class="project-overview">
             <h2>Project Overview</h2>
