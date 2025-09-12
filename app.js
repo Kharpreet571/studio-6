@@ -8,6 +8,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public')); // or wherever your CSS files are located
 
 // Routes
 app.get('/', (req, res) => {
