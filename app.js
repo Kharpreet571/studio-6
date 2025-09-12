@@ -40,8 +40,9 @@ app.get('/law', (req, res) => {
 
 // Issue page
 app.get('/issue', (req, res) => {
-    res.render('issues');
+    res.render('issues'); // matches issues.ejs
 });
+
 
 // Stakeholders page
 app.get('/stakeholders', (req, res) => {
