@@ -18,8 +18,8 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
-app.get('/law', (req, res) => {
-    res.render('law');
+app.get('/privacy laws', (req, res) => {
+    res.render('privacy laws');
 });
 
 app.get('/issue', (req, res) => {
