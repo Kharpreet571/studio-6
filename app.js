@@ -45,8 +45,8 @@ app.get('/stakeholders', (req, res) => {
     res.render('stakeholders');
 });
 
-app.get('/solutions', (req, res) => {
-    res.render('solutions');  // no .ejs needed
+app.get('/solution', (req, res) => {
+    res.render('solution');  // no .ejs needed
 });
 
 
