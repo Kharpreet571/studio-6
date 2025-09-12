@@ -1,47 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Privacy Hub - Laws</title>
-  <link rel="stylesheet" href="/style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <header>
-    <h1>Data Privacy Hub</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/laws" class="active">Laws</a></li>
-        <li><a href="/issues">Issues</a></li>
-        <li><a href="/stakeholders">Stakeholders</a></li>
-        <li><a href="/solutions">Solutions</a></li>
-    </nav>
-  </header>
-
-  <main class="privacy-container">
-    <h2>Privacy Laws & Regulations</h2>
-
-    <div class="definition-box">
-      <h3>FERPA (Family Educational Rights and Privacy Act)</h3>
-      <p>Protects the privacy of student education records in the US. Schools must have written consent before releasing information.</p>
-    </div>
-
-    <div class="definition-box">
-      <h3>COPPA (Children's Online Privacy Protection Act)</h3>
-      <p>Regulates online collection of personal info from children under 13. Websites must get parental consent.</p>
-    </div>
-
-    <div class="definition-box">
-      <h3>GDPR (General Data Protection Regulation)</h3>
-      <p>A European Union regulation to protect personal data. Emphasizes consent, transparency, and the right to be forgotten.</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Data Privacy Hub. All Rights Reserved.</p>
-  </footer>
-</body>
-</html>
+<%- include('partials/header') %>
+    <section class="content">
+        <h1>Privacy Laws and Regulations in Education</h1>
+        
+        <h2>GDPR (General Data Protection Regulation)</h2>
+        <ul>
+            <li>Special protections for children's data</li>
+            <li>Requires verifiable parental consent for under-16s</li>
+            <li>Right to be forgotten applies to educational records</li>
+            <li>Data protection impact assessments required for educational processing</li>
+            <li>Applies to international students from EU countries</li>
+        </ul>
+        
+        <h2>New Zealand Privacy Act 2020 - Educational Applications</h2>
+        <ul>
+            <li>Principle 5: Secure storage of student records</li>
+            <li>Principle 6: Student rights to access their educational information</li>
+            <li>Principle 9: Limiting retention of student data</li>
+            <li>Principle 11: Restrictions on disclosing student information</li>
+            <li>Special considerations for sensitive information in educational contexts</li>
+        </ul>
+        
+        <h2>FERPA (Family Educational Rights and Privacy Act)</h2>
+        <ul>
+            <li>Grants parents access to their children's education records</li>
+            <li>Limits disclosure of student information without consent</li>
+            <li>Allows parents to request record corrections</li>
+            <li>Provides right to opt out of directory information sharing</li>
+            <li>Contains exceptions for educational research and emergencies</li>
+        </ul>
+        
+        <h2>Case Study: University discloses student's location to Police</h2>
+        <p>In 2008, a New Zealand university disclosed a student's examination details to police due to mental health concerns about the student's firearms license. This case highlights the balance between privacy and safety concerns in educational settings.</p>
+    </section>
+<%- include('partials/footer') %>
