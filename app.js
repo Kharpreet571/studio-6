@@ -1,40 +1,16 @@
-const express = require('express');
+const express = require("express");
+const path = require("path");
 const app = express();
-const path = require('path');
 
-// Set EJS as the view engine
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set("view engine", "ejs");
 
-// Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('public')); // or wherever your CSS files are located
+// Serve static files from public folder
+app.use(express.static(path.join(__dirname, "public")));
 
-// Routes
-app.get('/', (req, res) => {
-  res.render('home'); // renders views/home.ejs
+app.get("/", (req, res) => {
+  res.render("home");
 });
 
-app.get('/about', (req, res) => {
-  res.render('about'); // renders views/about.ejs
+app.listen(3000, () => {
+  console.log("Server running at http://localhost:3000");
 });
-
-app.get('/laws', (req, res) => {
-  res.render('laws');
-});
-
-app.get('/issues', (req, res) => {
-  res.render('issues');
-});
-
-app.get('/stakeholders', (req, res) => {
-  res.render('stakeholders');
-});
-
-app.get('/solutions', (req, res) => {
-  res.render('solutions');
-});
-
-// Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
