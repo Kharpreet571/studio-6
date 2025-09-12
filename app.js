@@ -40,7 +40,7 @@ app.get('/law', (req, res) => {
 
 // Issue page
 app.get('/issue', (req, res) => {
-    res.render('issue');
+    res.render('issues');
 });
 
 // Stakeholders page
