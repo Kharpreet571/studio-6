@@ -29,7 +29,6 @@
     nav h2 {
         color: #fff;
         font-size: 1.5rem;
-        font-weight: 600;
     }
 
     nav ul {
@@ -42,13 +41,29 @@
         color: #fff;
         text-decoration: none;
         font-weight: 500;
-        transition: color 0.3s ease, border-bottom 0.3s ease;
-        padding-bottom: 2px;
+        transition: color 0.3s ease;
     }
 
     nav ul li a:hover {
-        color: #38bdf8;
-        border-bottom: 2px solid #38bdf8;
+        color: #6838f8;
+    }
+
+    /* Hero Section */
+    .hero {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: linear-gradient(to right, #647fed, #1518d3);
+        color: #fff;
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
     }
 
     /* Content */
@@ -58,66 +73,48 @@
         margin: 3rem auto;
     }
 
-    .content h1 {
-        font-size: 2.2rem;
-        text-align: center;
-        margin-bottom: 2rem;
-        color: #1518d3;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
     .content h2 {
         margin: 2rem 0 1rem;
         color: #1e293b;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         border-left: 5px solid #38bdf8;
-        padding-left: 12px;
-        background: #f1f5f9;
-        padding: 10px 15px;
-        border-radius: 6px;
+        padding-left: 10px;
     }
 
-    /* Lists */
-    .content ul {
-        margin: 1rem 0 2rem 2rem;
-        color: #475569;
-        list-style: disc;
+    /* Card Container */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
     }
 
-    .content ul li {
-        margin-bottom: 0.6rem;
-        transition: transform 0.2s ease, color 0.2s ease;
-    }
-
-    .content ul li:hover {
-        transform: translateX(6px);
-        color: #1518d3;
-    }
-
-    /* Case Study Box */
-    .case-study {
+    .card {
         background: #fff;
-        border-left: 6px solid #1518d3;
-        padding: 1.5rem;
-        margin-top: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .case-study:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
 
-    .case-study h3 {
-        margin-bottom: 0.8rem;
+    .card h3 {
+        margin-bottom: 1rem;
         color: #2563eb;
-        font-size: 1.3rem;
     }
 
-    .case-study p {
+    .card ul {
+        list-style: disc;
+        padding-left: 1.2rem;
+        color: #475569;
+    }
+
+    .content ul {
+        margin-left: 1.5rem;
         color: #475569;
     }
 </style>
@@ -125,49 +122,39 @@
 <!-- Navbar -->
 <nav>
     <h2>Data Privacy Hub</h2>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/solution">Solutions</a></li>
-        <li><a href="/issues">Issues</a></li>
-        <li><a href="/privacy-law">Privacy Laws</a></li>
-    </ul>
+    
 </nav>
-
-<!-- Content -->
-<section class="content">
-    <h1>Data Privacy Challenges in Education</h1>
-    
-    <h2>Common Issues in Educational Settings</h2>
-    <ul>
-        <li>Lack of transparency in educational data collection</li>
-        <li>Cloud storage risks with student information</li>
-        <li>Inconsistent data protection across educational platforms</li>
-        <li>Increasing frequency of educational data breaches</li>
-        <li>Excessive retention of student records beyond necessary periods</li>
-        <li>Privacy challenges from educational technology (EdTech)</li>
-    </ul>
-    
-    <h2>Educational Data Breaches</h2>
-    <ul>
-        <li>Unauthorized access to student information systems</li>
-        <li>Potential for serious harm including academic identity theft</li>
-        <li>Requirement to report breaches involving student data</li>
-        <li>Special sensitivity of minors' information in breaches</li>
-    </ul>
-    
-    <h2>Student-Specific Privacy Concerns</h2>
-    <ul>
-        <li>Educational apps collecting excessive personal data</li>
-        <li>Learning management systems tracking student behavior</li>
-        <li>Sharing student data with third-party educational services</li>
-        <li>Online proctoring software privacy issues</li>
-        <li>Long-term storage of digital learning analytics</li>
-    </ul>
-    
-    <div class="case-study">
-        <h3>Recruitment Agency Case Study</h3>
+    <section class="content">
+        <h1>Data Privacy Challenges in Education</h1>
+        
+        <h2>Common Issues in Educational Settings</h2>
+        <ul>
+            <li>Lack of transparency in educational data collection</li>
+            <li>Cloud storage risks with student information</li>
+            <li>Inconsistent data protection across educational platforms</li>
+            <li>Increasing frequency of educational data breaches</li>
+            <li>Excessive retention of student records beyond necessary periods</li>
+            <li>Privacy challenges from educational technology (EdTech)</li>
+        </ul>
+        
+        <h2>Educational Data Breaches</h2>
+        <ul>
+            <li>Unauthorized access to student information systems</li>
+            <li>Potential for serious harm including academic identity theft</li>
+            <li>Requirement to report breaches involving student data</li>
+            <li>Special sensitivity of minors' information in breaches</li>
+        </ul>
+        
+        <h2>Student-Specific Privacy Concerns</h2>
+        <ul>
+            <li>Educational apps collecting excessive personal data</li>
+            <li>Learning management systems tracking student behavior</li>
+            <li>Sharing student data with third-party educational services</li>
+            <li>Online proctoring software privacy issues</li>
+            <li>Long-term storage of digital learning analytics</li>
+        </ul>
+        
+        <h2>Recruitment Agency Case Study</h2>
         <p>A recruitment agency failed to remove all personal information from an old online profile, highlighting the importance of complete data deletion, especially for students entering the job market.</p>
-    </div>
-</section>
-
+    </section>
 <%- include('partials/footer') %>
