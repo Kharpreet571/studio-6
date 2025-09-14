@@ -1,4 +1,135 @@
 <%- include('partials/header') %>
+<style>
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #f8fafc;
+        color: #1e293b;
+        line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1e293b;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav h2 {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #6838f8;
+    }
+
+    /* Hero Section */
+    .hero {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: linear-gradient(to right, #647fed, #1518d3);
+        color: #fff;
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    /* Content */
+    .content {
+        width: 90%;
+        max-width: 1100px;
+        margin: 3rem auto;
+    }
+
+    .content h2 {
+        margin: 2rem 0 1rem;
+        color: #1e293b;
+        font-size: 1.8rem;
+        border-left: 5px solid #38bdf8;
+        padding-left: 10px;
+    }
+
+    /* Card Container */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
+    .card {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+        margin-bottom: 1rem;
+        color: #2563eb;
+    }
+
+    .card ul {
+        list-style: disc;
+        padding-left: 1.2rem;
+        color: #475569;
+    }
+
+    .content ul {
+        margin-left: 1.5rem;
+        color: #475569;
+    }
+</style>
+
+<!-- Navbar -->
+<nav>
+    <h2>Data Privacy Hub</h2>
+    
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Data Privacy & Protection in Education</h1>
+    <p>Safeguarding student information in academic environments</p>
+</section>
     <section class="content">
         <h1>About Data Privacy in Education</h1>
         
