@@ -118,12 +118,154 @@
         margin-left: 1.5rem;
         color: #475569;
     }
+    
+    /* Two-column layout for project information */
+    .project-section {
+        margin: 3rem 0;
+    }
+    
+    .project-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    
+    .project-header h2 {
+        font-size: 2.2rem;
+        color: #1e293b;
+        margin-bottom: 1rem;
+        border: none;
+        padding: 0;
+    }
+    
+    .project-header p {
+        font-size: 1.1rem;
+        color: #475569;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .two-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        margin: 2rem 0;
+    }
+    
+    .column {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .column-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid #e2e8f0;
+    }
+    
+    .column-icon {
+        background: #2563eb;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        font-weight: bold;
+    }
+    
+    .column h3 {
+        color: #1e293b;
+        font-size: 1.4rem;
+    }
+    
+    .objective-item, .scope-item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #f1f5f9;
+    }
+    
+    .objective-item:last-child, .scope-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .objective-item h4, .scope-item h4 {
+        color: #2563eb;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .objective-item p, .scope-item p {
+        color: #475569;
+    }
+    
+    /* Overview section */
+    .overview-container {
+        background: #fff;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        margin: 2.5rem 0;
+    }
+    
+    .overview-container h3 {
+        color: #1e293b;
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .overview-points {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .overview-point {
+        background: #f8fafc;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        border-left: 4px solid #2563eb;
+    }
+    
+    .overview-point h4 {
+        color: #2563eb;
+        margin-bottom: 0.75rem;
+        font-size: 1.1rem;
+    }
+    
+    .overview-point p {
+        color: #475569;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+        .two-column-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .overview-points {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 
 <!-- Navbar -->
 <nav>
     <h2>Data Privacy Hub</h2>
-    
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </nav>
 
 <!-- Hero Section -->
@@ -166,6 +308,102 @@
         <li>Long-term storage of academic records</li>
         <li>Sharing student data with research institutions without proper consent</li>
     </ul>
+</section>
+
+<!-- Project Information Section -->
+<section class="content project-section">
+    <div class="project-header">
+        <h2>Research Project: Balancing Innovation and Privacy</h2>
+        <p>This study examines the balance between utilizing data-driven technologies for educational innovation and maintaining strong ethical protections for student data privacy.</p>
+    </div>
+    
+    <div class="two-column-grid">
+        <div class="column">
+            <div class="column-header">
+                <div class="column-icon">A</div>
+                <h3>Aim of the Research</h3>
+            </div>
+            <p>The research seeks to develop and recommend a comprehensive governance framework that enables educational institutions to benefit from artificial intelligence (AI) and big data analytics while protecting student privacy through proactive policies, technical safeguards, and increased cultural awareness.</p>
+        </div>
+        
+        <div class="column">
+            <div class="column-header">
+                <div class="column-icon">S</div>
+                <h3>Project Scope</h3>
+            </div>
+            <p>The project's scope is a thorough evaluation of the balance between exploiting data-driven technology for educational innovation and upholding strong ethical student data privacy safeguards. It attempts to create and promote a governance framework that allows educational institutions to use AI and big data analytics while protecting student privacy.</p>
+        </div>
+    </div>
+    
+    <h2>Project Objectives</h2>
+    
+    <div class="two-column-grid">
+        <div class="column">
+            <div class="column-header">
+                <div class="column-icon">1</div>
+                <h3>Primary Objectives</h3>
+            </div>
+            
+            <div class="objective-item">
+                <h4>Examine the Central Dilemma</h4>
+                <p>To research the struggle between instructional technology innovation and student data privacy, examining potential risks and ethical issues.</p>
+            </div>
+            
+            <div class="objective-item">
+                <h4>Establish the Data Privacy Environment</h4>
+                <p>To establish dominant concepts of educational data and data privacy policies, and to articulate the importance of safeguarding student data from legal, ethical, and trust perspectives.</p>
+            </div>
+            
+            <div class="objective-item">
+                <h4>Map the Regulatory Environment</h4>
+                <p>To define and summarize primary student data privacy laws (FERPA, COPPA, GDPR) and detail their requirements for education institutions and technology providers.</p>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="column-header">
+                <div class="column-icon">2</div>
+                <h3>Implementation Objectives</h3>
+            </div>
+            
+            <div class="objective-item">
+                <h4>Recommend a Proactive Governance Framework</h4>
+                <p>To develop evidence-informed suggestions for institutions, including future-oriented ethical policy, technical security controls (e.g., "privacy by design"), operational controls (bias screening), and prioritizing continuous monitoring and cultural change.</p>
+            </div>
+            
+            <div class="objective-item">
+                <h4>Provide Practical Guidelines to Stakeholders</h4>
+                <p>To give direction to teachers regarding data privacy and digital citizenship, and best practices for administrators in vendor management, policy development, and trust-building.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="overview-container">
+        <h3>Project Overview</h3>
+        <p>This research is a thorough examination of the crucial problem of striking a balance between student data privacy and technology innovation in contemporary educational settings.</p>
+        
+        <div class="overview-points">
+            <div class="overview-point">
+                <h4>Problem Definition</h4>
+                <p>Describes the "double-edged sword" of privacy vs innovation, emphasising the moral and legal conflicts that educational institutions must resolve.</p>
+            </div>
+            
+            <div class="overview-point">
+                <h4>Analysing the Landscape</h4>
+                <p>Giving a thorough overview of the concepts of educational data (demographic, academic, behavioural, and engagement), its applications, and the significance of safeguarding it.</p>
+            </div>
+            
+            <div class="overview-point">
+                <h4>Analysing the Legal Framework</h4>
+                <p>Going over important privacy laws and rules (including COPPA, GDPR, and FERPA) that control how student data is handled and set criteria for districts and schools to comply with.</p>
+            </div>
+            
+            <div class="overview-point">
+                <h4>Putting Forward a Solution</h4>
+                <p>Addressing the main study topic by promoting a multi-tiered governance architecture with proactive ethical policies, technical safeguards, operational measures, and cultural shift.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <%- include('partials/footer') %>
