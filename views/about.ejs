@@ -1,4 +1,5 @@
 <%- include('partials/header') %>
+
 <style>
     /* Reset */
     * {
@@ -117,12 +118,72 @@
         margin-left: 1.5rem;
         color: #475569;
     }
+    
+    /* New styles for the additional content */
+    .section-divider {
+        height: 2px;
+        background: linear-gradient(to right, #f8fafc, #38bdf8, #f8fafc);
+        margin: 3rem 0;
+        border: none;
+    }
+    
+    .content p {
+        margin-bottom: 1rem;
+        color: #475569;
+    }
+    
+    .subsection {
+        margin: 2rem 0;
+    }
+    
+    .subsection h3 {
+        color: #2563eb;
+        margin-bottom: 0.75rem;
+        font-size: 1.4rem;
+    }
+    
+    .citation {
+        font-style: italic;
+        color: #64748b;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .solution-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .solution-card {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-top: 4px solid #2563eb;
+    }
+    
+    .solution-card h4 {
+        color: #1e293b;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .solution-card p {
+        color: #475569;
+    }
 </style>
 
 <!-- Navbar -->
 <nav>
     <h2>Data Privacy Hub</h2>
-    
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </nav>
 
 <!-- Hero Section -->
@@ -130,33 +191,91 @@
     <h1>Data Privacy & Protection in Education</h1>
     <p>Safeguarding student information in academic environments</p>
 </section>
-    <section class="content">
-        <h1>About Data Privacy in Education</h1>
+
+<!-- Content -->
+<section class="content">
+    <h2>What is Data Privacy?</h2>
+    <p>Data privacy refers to the proper handling of personal information including how it's collected, stored, shared, and used.</p>
+    
+    <div class="card-container">
+        <div class="card">
+            <h3>For Students</h3>
+            <ul>
+                <li>Control over academic records and personal information</li>
+                <li>Protection from educational data misuse</li>
+                <li>Rights to access and correct educational records</li>
+                <li>Prevention of unauthorized sharing of academic performance</li>
+            </ul>
+        </div>
         
-        <h2>Importance for Students</h2>
-        <ul>
-            <li>Protection from educational profiling and tracking</li>
-            <li>Prevention of academic identity theft</li>
-            <li>Maintaining control over educational records</li>
-            <li>Avoiding unauthorized use of performance data</li>
-            <li>Protecting future opportunities from data misuse</li>
-        </ul>
+        <div class="card">
+            <h3>For Educational Institutions</h3>
+            <ul>
+                <li>FERPA compliance requirements</li>
+                <li>Secure management of student records</li>
+                <li>Ethical use of student data for educational purposes</li>
+                <li>Preventing data breaches in educational systems</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h2>Student Data Privacy Concerns</h2>
+    <ul>
+        <li>Educational technology platforms collecting excessive data</li>
+        <li>Third-party educational service providers accessing student information</li>
+        <li>Long-term storage of academic records</li>
+        <li>Sharing student data with research institutions without proper consent</li>
+    </ul>
+</section>
+
+<hr class="section-divider">
+
+<!-- New Content: Introduction and Central Dilemma -->
+<section class="content">
+    <h2>Introduction: The Central Dilemma of Modern Education</h2>
+    <p>A key challenge in education is balancing what works best for each person with what benefits the whole class. For example, when students choose whether to participate or teachers pick certain methods, decisions that seem best for one can actually make things harder for everyone if everyone does the same. Managing this tension between self-interest and working together is important for good teaching and learning.</p>
+    <p class="citation">(Fahim & Parsazadeh, 2015)</p>
+    
+    <div class="subsection">
+        <h3>The Double-Edged Sword: Innovation vs. Privacy</h3>
+        <p>New technology, especially AI, has both good and bad sides. On one hand, it brings big economic growth and makes things work better. On the other hand, it can hurt important values like privacy. Right now, the system mostly focuses on making things more productive and profitable, which encourages companies to collect and use a lot of personal data.</p>
+        <p>This puts us in a tough spot: if we slow down new technology, we might fall behind less ethical competitors, but if we let it grow without limits, it can make problems like inequality and harm to society worse. The challenge is to use this technology wisely, with rules and strong moral guidance, so that it helps everyone, not just big companies.</p>
         
-        <h2>Importance for Educational Institutions</h2>
-        <ul>
-            <li>Legal compliance with FERPA and other educational privacy laws</li>
-            <li>Building trust with students and parents</li>
-            <li>Preventing costly data breaches involving student information</li>
-            <li>Ethical responsibility to protect vulnerable populations</li>
-            <li>Maintaining institutional reputation</li>
-        </ul>
+        <h4>Innovation in Education</h4>
+        <p>Technological innovation is having a clear impact on how schools design their curricula. Schools are updating their programs to keep up with the rise of AI, helping students get ready for a digital world. There is a strong emphasis on teaching digital and AI skills, which is seen as important for future economic success and reflects a broader trend toward technology-driven growth.</p>
+        <p>The authors point out that data science and AI classes are becoming more popular, and even young children are being introduced to coding. This shows that updating education to include these skills is seen as both necessary and unavoidable, in line with the ongoing push for technological progress.</p>
+        <p class="citation">(De Cremer, 2021)</p>
         
-        <h2>Special Considerations for Student Data</h2>
-        <ul>
-            <li>Heightened sensitivity of minors' information</li>
-            <li>Long-term implications of educational records</li>
-            <li>Parental rights regarding children's educational data</li>
-            <li>Balancing educational research with privacy protection</li>
-        </ul>
-    </section>
+        <h4>Privacy in Education</h4>
+        <p>The integration of technology in learning raises a serious issue of data privacy. While teachers and students benefit from computer-based facilities, they involuntarily relinquish personal information, thus risking exposure. This has a bearing on the broader ethical issue that the accumulation of personal information for the purposes of convenience has the potential to lead to exploitation and injustice in its mismanagement by technology providers.</p>
+        <p>Individuals "do not always realize the plain fact that in being digitally linked their information is gathered by known and unknown others," which "puts them in risk of exploitation and possible unfair treatment."</p>
+        <p>Thus, the use of educational technology is a double-edged sword, offering new learning capacity while simultaneously posing severe threats to privacy that must be managed to prevent harm.</p>
+        <p class="citation">(Kasparov, 27)</p>
+    </div>
+    
+    <h2>How can educational institutions effectively govern data-driven technologies?</h2>
+    <p>Educational institutions can address the challenges of balancing innovation and privacy by adopting a comprehensive governance framework that combines proactive policies, technological safeguards, and ethical practices. This ensures both priorities are integrated through intentional design and ongoing oversight.</p>
+    
+    <div class="solution-grid">
+        <div class="solution-card">
+            <h4>Establish a Proactive Ethical and Regulatory Framework</h4>
+            <p>Good governance starts with building a strong, flexible set of rules and ethical guidelines that look ahead to possible risks, not just respond to them. Schools need to do more than simply follow laws like FERPA or GDPR. They should create their own detailed policies that fit the specific issues of educational AI.</p>
+            <p class="citation">(Chakraborty2024 & Zeide, ETHICAL CONSIDERATIONS IN DEPLOYING AI AND DATA-DRIVEN TECHNOLOGIES FOR ADAPTIVE EDUCATION, 27)</p>
+        </div>
+        
+        <div class="solution-card">
+            <h4>Implementing Technical and Operational Safeguards</h4>
+            <p>In addition to having strong policies, institutions need to put practical technical and operational measures in place to reduce data collection, protect student information, and address algorithmic bias.</p>
+            <p>This means following a 'privacy by design' approach with tools such as data anonymisation, local data processing, and federated learning when possible.</p>
+            <p class="citation">(Chakraborty2024 & Azra & Zeeshan, n.d.)</p>
+        </div>
+        
+        <div class="solution-card">
+            <h4>Fostering a Culture of Ethical Awareness</h4>
+            <p>Beyond policies and technical measures, institutions must cultivate an organizational culture that prioritizes ethical considerations in data use. This involves training for educators, administrators, and students about responsible data practices and digital citizenship.</p>
+            <p>Creating channels for ongoing dialogue about ethical dilemmas and establishing clear accountability structures helps ensure that privacy considerations remain central to institutional decision-making.</p>
+        </div>
+    </div>
+</section>
+
 <%- include('partials/footer') %>
