@@ -1,4 +1,5 @@
 <%- include('partials/header') %>
+
 <style>
     /* Reset */
     * {
@@ -117,12 +118,190 @@
         margin-left: 1.5rem;
         color: #475569;
     }
+    
+    /* New styles for the additional content */
+    .section-divider {
+        height: 2px;
+        background: linear-gradient(to right, #f8fafc, #38bdf8, #f8fafc);
+        margin: 3rem 0;
+        border: none;
+    }
+    
+    .content p {
+        margin-bottom: 1rem;
+        color: #475569;
+    }
+    
+    .subsection {
+        margin: 2rem 0;
+    }
+    
+    .subsection h3 {
+        color: #2563eb;
+        margin-bottom: 0.75rem;
+        font-size: 1.4rem;
+    }
+    
+    .citation {
+        font-style: italic;
+        color: #64748b;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .solution-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .solution-card {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-top: 4px solid #2563eb;
+    }
+    
+    .solution-card h4 {
+        color: #1e293b;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .solution-card p {
+        color: #475569;
+    }
+    
+    /* Data types styling */
+    .data-type-section {
+        margin: 2.5rem 0;
+    }
+    
+    .data-type-card {
+        background: #fff;
+        padding: 1.8rem;
+        border-radius: 0.8rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+        margin-bottom: 2rem;
+        border-left: 4px solid #2563eb;
+    }
+    
+    .data-type-card h3 {
+        color: #1e293b;
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+    }
+    
+    .data-point {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .data-point:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .data-point h4 {
+        color: #2563eb;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .data-point p {
+        color: #475569;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Privacy law styling */
+    .law-section {
+        margin: 2.5rem 0;
+    }
+    
+    .law-card {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 0.8rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        margin-bottom: 2rem;
+    }
+    
+    .law-card h3 {
+        color: #1e293b;
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+        border-bottom: 2px solid #e2e8f0;
+        padding-bottom: 0.5rem;
+    }
+    
+    .law-point {
+        margin-bottom: 1.2rem;
+    }
+    
+    .law-point h4 {
+        color: #2563eb;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .law-point p {
+        color: #475569;
+    }
+    
+    .myth-truth-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+    }
+    
+    .myth-truth-table th, .myth-truth-table td {
+        padding: 0.8rem;
+        border: 1px solid #e2e8f0;
+    }
+    
+    .myth-truth-table th {
+        background-color: #f1f5f9;
+        font-weight: 600;
+    }
+    
+    .myth-truth-table tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    
+    /* Case study styling */
+    .case-study {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 0.8rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        margin: 2.5rem 0;
+        border-left: 4px solid #ef4444;
+    }
+    
+    .case-study h3 {
+        color: #1e293b;
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+    }
+    
+    .case-study p {
+        color: #475569;
+    }
 </style>
 
 <!-- Navbar -->
 <nav>
     <h2>Data Privacy Hub</h2>
-    
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </nav>
 
 <!-- Hero Section -->
@@ -130,37 +309,358 @@
     <h1>Data Privacy & Protection in Education</h1>
     <p>Safeguarding student information in academic environments</p>
 </section>
-    <section class="content">
-        <h1>Privacy Laws and Regulations in Education</h1>
+
+<!-- Content -->
+<section class="content">
+    <h2>What is Student Data?</h2>
+    <p>Student data includes any information collected about a student, such as name, address, age, gender, ethnicity, enrollment details, grade level, attendance, course enrollment, test scores, and grades. Health information, including learning-related diagnoses, medical issues, and disciplinary records, is also protected by student data privacy laws.</p>
+    <p class="citation">(Mātauranga Matua, 2021)</p>
+    
+    <div class="data-type-section">
+        <h2>Four Types of Educational Data</h2>
         
-        <h2>GDPR (General Data Protection Regulation)</h2>
-        <ul>
-            <li>Special protections for children's data</li>
-            <li>Requires verifiable parental consent for under-16s</li>
-            <li>Right to be forgotten applies to educational records</li>
-            <li>Data protection impact assessments required for educational processing</li>
-            <li>Applies to international students from EU countries</li>
-        </ul>
+        <div class="data-type-card">
+            <h3>1. Demographic Information</h3>
+            <p>Collecting data on students' age, gender, socioeconomic background, income level, and language proficiency enables educational institutions to identify individual learning requirements.</p>
+            
+            <div class="data-point">
+                <h4>Age</h4>
+                <p><strong>Definition:</strong> A way to track development and determine appropriate grade levels.</p>
+                <p><strong>Impact:</strong> Provides insights into age-related learning patterns and optimal timing for educational interventions.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Gender</h4>
+                <p><strong>Definition:</strong> Socially formed identities, duties, and behaviours that go beyond biological sex.</p>
+                <p><strong>Impact:</strong> Affects participation rates in extracurricular activities, STEM/arts stereotypes, and access to opportunities.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Race/Ethnicity</h4>
+                <p><strong>Definition:</strong> A social or cultural identity rooted in customs, heritage, or ancestry.</p>
+                <p><strong>Effects:</strong> Influences achievement disparities, bias in disciplinary measures, and cultural representation.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Socioeconomic Status</h4>
+                <p><strong>Definition:</strong> Students' economic and social position relative to others based on income, education, and occupation.</p>
+                <p><strong>Impact:</strong> Affects access to educational resources, opportunities, and support systems.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Language</h4>
+                <p><strong>Definition:</strong> Students' methods of communication, both written and oral, including their first language and fluency in other languages.</p>
+                <p><strong>Impact:</strong> Fluency and understanding skills can affect educational outcomes and access to resources.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Disability Status</h4>
+                <p><strong>Definition:</strong> Physical, sensory, mental, or emotional disabilities that affect learning capacity.</p>
+                <p><strong>Impact:</strong> Affects capacity to obtain assistance and accommodations that promote academic achievement.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Geographic Location</h4>
+                <p><strong>Definition:</strong> The geographic location of a student's home or town.</p>
+                <p><strong>Impact:</strong> Affects access to educational opportunities and resources, as well as social and cultural factors influencing academic performance.</p>
+            </div>
+        </div>
         
-        <h2>New Zealand Privacy Act 2020 - Educational Applications</h2>
-        <ul>
-            <li>Principle 5: Secure storage of student records</li>
-            <li>Principle 6: Student rights to access their educational information</li>
-            <li>Principle 9: Limiting retention of student data</li>
-            <li>Principle 11: Restrictions on disclosing student information</li>
-            <li>Special considerations for sensitive information in educational contexts</li>
-        </ul>
+        <div class="data-type-card">
+            <h3>2. Academic Performance</h3>
+            <p>Data on academic performance quantifies pupils' growth and accomplishments in a variety of areas and skills.</p>
+            
+            <div class="data-point">
+                <h4>Grades</h4>
+                <p>Scores or letters obtained on assignments, tests, and courses indicating understanding and mastery of material.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Standardized Test Scores</h4>
+                <p>Results from standardized exams (SAT, ACT, state exams) that compare performance to other students.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Course Completion Rates</h4>
+                <p>The percentage of students who finish a course or program, indicating perseverance and success.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Attendance Rates</h4>
+                <p>The percentage of time students spend in school or class, indicating involvement and participation.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Graduation Rates</h4>
+                <p>The percentage of students that finish their education within a given time frame.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Progress Monitoring Data</h4>
+                <p>Information gathered over time to monitor development in specific abilities or domains.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Teacher Observations</h4>
+                <p>Qualitative data on student performance in classroom activities, behavior, participation, and assignment completion.</p>
+            </div>
+        </div>
         
-        <h2>FERPA (Family Educational Rights and Privacy Act)</h2>
-        <ul>
-            <li>Grants parents access to their children's education records</li>
-            <li>Limits disclosure of student information without consent</li>
-            <li>Allows parents to request record corrections</li>
-            <li>Provides right to opt out of directory information sharing</li>
-            <li>Contains exceptions for educational research and emergencies</li>
-        </ul>
+        <div class="data-type-card">
+            <h3>3. Behavioral Records</h3>
+            <p>Information on students' behavior both within and outside of the classroom.</p>
+            
+            <div class="data-point">
+                <h4>Discipline Incidents</h4>
+                <p>Information on student offenses and disciplinary procedures taken.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Suspensions and Expulsions</h4>
+                <p>The number of times a student has been removed from school due to behavioral issues.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Behavior Checklists</h4>
+                <p>Standardized checklists for documenting student behavior.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Peer and Parent Surveys</h4>
+                <p>Documentations of student behavior provided by classmates or parents.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Counselling and Mental Health Records</h4>
+                <p>Qualitative records of counselling or mental health appointments.</p>
+            </div>
+        </div>
         
-        <h2>Case Study: University discloses student's location to Police</h2>
+        <div class="data-type-card">
+            <h3>4. Engagement Indicators</h3>
+            <p>Information about how students are engaged in learning activities.</p>
+            
+            <div class="data-point">
+                <h4>Class Participation</h4>
+                <p>The extent to which students take part in class activities and discussions.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Homework Completion</h4>
+                <p>The quantity of student work completed outside of class.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Learning Time</h4>
+                <p>Time that students spend on learning activities.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Performance on Assessments</h4>
+                <p>The extent to which students show knowledge and ability in coursework.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Technology Use</h4>
+                <p>How students leverage technologies to assist their studying.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Extracurricular Involvement</h4>
+                <p>Participation in school organizations, clubs, sports, and other activities.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Social and Emotional Learning</h4>
+                <p>Development of social and emotional skills like self-awareness and relationship skills.</p>
+            </div>
+            
+            <div class="data-point">
+                <h4>Mobility Rates</h4>
+                <p>Student rate of switching schools over time.</p>
+            </div>
+        </div>
+    </div>
+    
+    <h2>How Data is Used: From Personalized Learning to Institutional Analytics</h2>
+    <p>Big Data Analytics (BDA) in education serves dual purposes: improving individual student outcomes and streamlining institutional processes.</p>
+    <p class="citation">(Palani, 2024)</p>
+    
+    <div class="card-container">
+        <div class="card">
+            <h3>Personalized Learning</h3>
+            <ul>
+                <li>Tailoring educational experiences to individual needs</li>
+                <li>Identifying at-risk students for early intervention</li>
+                <li>Adaptive software that adjusts to student skill levels</li>
+                <li>Providing instant feedback to educators</li>
+            </ul>
+            <p class="citation">(Dr. Suchitra Labhane, 2024)</p>
+        </div>
+        
+        <div class="card">
+            <h3>Institutional Analytics</h3>
+            <ul>
+                <li>Optimizing resource allocation and scheduling</li>
+                <li>Informing strategic planning and policy development</li>
+                <li>Improving curriculum based on performance data</li>
+                <li>Benchmarking against other institutions</li>
+            </ul>
+            <p class="citation">(Mr. P. Krishnamoorthy, 2024)</p>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- Privacy Laws Section -->
+<section class="content">
+    <h2>Student Privacy Laws: What District & School Administrators Need To Know</h2>
+    <p>Due to the increased use of technology in schools, student data privacy has become a major concern. Education officials need to navigate complicated federal, state, and local privacy rules.</p>
+    <p class="citation">(Education Framework, 2025)</p>
+    
+    <div class="law-section">
+        <h2>Why Should Schools Care About Data Protection?</h2>
+        <p>Schools handle vast amounts of sensitive student data, exposing them to strict legal regulations. The consequences of failing to uphold these standards can be severe, as demonstrated when Lincoln College in Illinois had to shut down permanently following a ransomware attack on its data systems in 2022.</p>
+        <p class="citation">(Nason, 2024)</p>
+    </div>
+    
+    <div class="law-section">
+        <h2>The Big Three Privacy Laws for Student Data</h2>
+        
+        <div class="law-card">
+            <h3>FERPA (Family Educational Rights and Privacy Act)</h3>
+            
+            <div class="law-point">
+                <h4>What is it?</h4>
+                <p>FERPA, created in 1974 by the U.S. Department of Education, is a federal statute that gives parents and students aged 18 and above the right to examine educational records. It applies to both paper and electronic documents.</p>
+            </div>
+            
+            <div class="law-point">
+                <h4>How it works:</h4>
+                <ul>
+                    <li>Applies exclusively to education records maintained by educational institutions</li>
+                    <li>Prohibits disclosure of personally identifiable information without consent</li>
+                    <li>Includes exceptions for school officials, directory information, and emergencies</li>
+                    <li>Gives parents and students control over their educational records</li>
+                </ul>
+            </div>
+            
+            <div class="law-point">
+                <h4>Why it's important:</h4>
+                <p>FERPA is the cornerstone statute protecting student data privacy in the United States. It empowers students and ensures a secure learning environment by balancing privacy rights with institutional needs.</p>
+                <p class="citation">(Frank & Wagner, 2018; Sayer & M, 2005)</p>
+            </div>
+            
+            <div class="law-point">
+                <h4>Common Myths vs. The Truth</h4>
+                <table class="myth-truth-table">
+                    <tr>
+                        <th>Myth (What People Think)</th>
+                        <th>Truth (How it Actually Works)</th>
+                    </tr>
+                    <tr>
+                        <td>FERPA protects all student information</td>
+                        <td>It protects only "education records," not personal knowledge or observations</td>
+                    </tr>
+                    <tr>
+                        <td>FERPA prohibits the release of anything to parents</td>
+                        <td>Schools may release information to parents of tax dependents or in health/safety emergencies</td>
+                    </tr>
+                    <tr>
+                        <td>Violating FERPA is catastrophic</td>
+                        <td>The penalty (revocation of federal funding) has never been exercised</td>
+                    </tr>
+                </table>
+                <p class="citation">(MCDONALD, 2008)</p>
+            </div>
+            
+            <div class="law-point">
+                <h4>Current Challenges:</h4>
+                <ul>
+                    <li>Misunderstanding and "myth-perpetuation" among staff</li>
+                    <li>Adapting a 1974 law to digital technology and cloud storage</li>
+                    <li>Ensuring data security in an era of frequent breaches</li>
+                    <li>Faculty using apps without proper vetting of terms of service</li>
+                </ul>
+                <p class="citation">(Kelly & Hailly, 2018)</p>
+            </div>
+        </div>
+        
+        <div class="law-card">
+            <h3>COPPA (Children's Online Privacy Protection Act)</h3>
+            
+            <div class="law-point">
+                <h4>What is it?</h4>
+                <p>COPPA was implemented in 1998 by the Federal Trade Commission (FTC) to protect children under the age of 13 online privacy. It requires verifiable parental consent before collecting personal information from children.</p>
+            </div>
+            
+            <div class="law-point">
+                <h4>How it works in education:</h4>
+                <ul>
+                    <li>Schools can act as parents' agents for educational purposes</li>
+                    <li>Consent is valid only for educational purposes, not commercial use</li>
+                    <li>Regulates website and online service operators, not schools directly</li>
+                    <li>Requires operators to provide clear privacy policies and security</li>
+                </ul>
+                <p class="citation">(S. Skowronski, 2022)</p>
+            </div>
+            
+            <div class="law-point">
+                <h4>Why it's important:</h4>
+                <ul>
+                    <li>Children are vulnerable and may not understand privacy risks</li>
+                    <li>Protects against targeting, exploitation, and real-world harms</li>
+                    <li>Essential with the massive shift to online learning</li>
+                </ul>
+                <p class="citation">(A. Matecki, 2010)</p>
+            </div>
+            
+            <div class="law-point">
+                <h4>Current Challenges:</h4>
+                <ul>
+                    <li>School exception undermines parental consent purpose</li>
+                    <li>Third-party trackers in educational services</li>
+                    <li>Weak enforcement and "slap on the wrist" penalties</li>
+                    <li>Age limitation leaves teenagers unprotected</li>
+                    <li>Inadequate teacher awareness of requirements</li>
+                    <li>Struggles to keep pace with technological change</li>
+                </ul>
+                <p class="citation">(Herold, 2017)</p>
+            </div>
+        </div>
+        
+        <div class="law-card">
+            <h3>GDPR (General Data Protection Regulation)</h3>
+            
+            <div class="law-point">
+                <h4>What is it?</h4>
+                <p>The GDPR is a comprehensive European Union law that came into force in May 2018 to protect the privacy and personal information of EU residents. It implements stringent requirements for data collection, processing, and protection.</p>
+                <p class="citation">(BRIEFING, 2018; University of california, 2018)</p>
+            </div>
+            
+            <div class="law-point">
+                <h4>Key principles:</h4>
+                <ul>
+                    <li>Lawfulness, transparency, and data minimization</li>
+                    <li>Rights to access, rectification, and erasure of data</li>
+                    <li>Accountability and security requirements</li>
+                    <li>Unifies data privacy law throughout Europe</li>
+                </ul>
+            </div>
+            
+            <div class="law-point">
+                <h4>Relevance to education:</h4>
+                <p>The GDPR is particularly important for protecting vulnerable teenage learners as schools adopt digital technologies and AI-based tools like Learning Analytics (LA).</p>
+                <p class="citation">(Paludi, 2024; Bećirović, 2023)</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="case-study">
+        <h3>Case Study: University discloses student's location to Police</h3>
         <p>In 2008, a New Zealand university disclosed a student's examination details to police due to mental health concerns about the student's firearms license. This case highlights the balance between privacy and safety concerns in educational settings.</p>
-    </section>
+    </div>
+</section>
+
 <%- include('partials/footer') %>
