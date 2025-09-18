@@ -1,6 +1,6 @@
 <%- include('partials/header') %>
 <style>
-    /* Reset */
+    /* Reset code*/
     * {
         margin: 0;
         padding: 0;
@@ -117,12 +117,86 @@
         margin-left: 1.5rem;
         color: #475569;
     }
+    
+    /* New styles for solutions content */
+    .solution-section {
+        margin: 2.5rem 0;
+    }
+    
+    .solution-card {
+        background: #fff;
+        padding: 1.8rem;
+        border-radius: 0.8rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+        margin-bottom: 2rem;
+        border-left: 4px solid #2563eb;
+    }
+    
+    .solution-card h3 {
+        color: #1e293b;
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+    }
+    
+    .solution-point {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .solution-point:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .solution-point h4 {
+        color: #2563eb;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .solution-point ul {
+        margin-left: 1.5rem;
+        color: #475569;
+    }
+    
+    .solution-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .solution-item {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-top: 4px solid #2563eb;
+    }
+    
+    .solution-item h4 {
+        color: #1e293b;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .solution-item ul {
+        color: #475569;
+        margin-left: 1.2rem;
+    }
 </style>
 
 <!-- Navbar -->
 <nav>
     <h2>Data Privacy Hub</h2>
-    
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </nav>
 
 <!-- Hero Section -->
@@ -131,52 +205,213 @@
     <p>Safeguarding student information in academic environments</p>
 </section>
 
-    <section class="content">
-        <h1>Solutions for Educational Data Privacy</h1>
+<!-- Content -->
+<section class="content">
+    <h2>Solutions for Educational Data Privacy</h2>
+    <p>Implementing effective data privacy solutions requires a multi-faceted approach that addresses technical, policy, and human factors in educational environments.</p>
+    
+    <div class="solution-section">
+        <div class="solution-card">
+            <h3>For Students</h3>
+            
+            <div class="solution-point">
+                <h4>Personal Security Practices</h4>
+                <ul>
+                    <li>Use strong, unique passwords for educational accounts</li>
+                    <li>Enable two-factor authentication (2FA) on all educational platforms</li>
+                    <li>Be cautious about sharing personal information in online learning environments</li>
+                    <li>Regularly review privacy settings on educational apps</li>
+                    <li>Understand your rights regarding educational records</li>
+                </ul>
+            </div>
+            
+            <div class="solution-point">
+                <h4>Digital Literacy Development</h4>
+                <ul>
+                    <li>Participate in digital citizenship education programs</li>
+                    <li>Learn to identify potential privacy risks in educational technology</li>
+                    <li>Understand how personal data is collected and used in learning platforms</li>
+                    <li>Develop critical thinking skills about data sharing</li>
+                </ul>
+            </div>
+        </div>
         
-        <h2>For Students</h2>
-        <ul>
-            <li>Use strong, unique passwords for educational accounts</li>
-            <li>Enable 2FA on all educational platforms</li>
-            <li>Be cautious about sharing personal information in online learning environments</li>
-            <li>Regularly review privacy settings on educational apps</li>
-            <li>Understand your rights regarding educational records</li>
-        </ul>
+        <div class="solution-card">
+            <h3>For Educational Institutions</h3>
+            
+            <div class="solution-point">
+                <h4>Policy Implementation</h4>
+                <ul>
+                    <li>Implement transparent data practices for students and parents</li>
+                    <li>Create privacy-first educational technology policies</li>
+                    <li>Prioritize student privacy over data collection</li>
+                    <li>View students as partners in privacy protection</li>
+                    <li>Conduct regular privacy impact assessments for educational systems</li>
+                </ul>
+            </div>
+            
+            <div class="solution-point">
+                <h4>Administrative Measures</h4>
+                <ul>
+                    <li>Establish clear data governance frameworks</li>
+                    <li>Develop incident response plans for educational data breaches</li>
+                    <li>Create data retention policies for student records</li>
+                    <li>Implement regular privacy training for educational staff</li>
+                    <li>Establish student and parental consent processes for data processing</li>
+                </ul>
+            </div>
+        </div>
         
-        <h2>For Educational Institutions</h2>
-        <ul>
-            <li>Implement transparent data practices for students and parents</li>
-            <li>Create privacy-first educational technology policies</li>
-            <li>Prioritize student privacy over data collection</li>
-            <li>View students as partners in privacy protection</li>
-            <li>Conduct regular privacy impact assessments for educational systems</li>
-        </ul>
+        <div class="solution-card">
+            <h3>Technical Measures for Educational Data</h3>
+            
+            <div class="solution-point">
+                <h4>Data Security</h4>
+                <ul>
+                    <li>Encryption of student data both in transit and at rest</li>
+                    <li>Strict access controls for educational records</li>
+                    <li>Regular security audits of educational technology systems</li>
+                    <li>Secure email practices for communicating student information</li>
+                    <li>Data minimization in educational analytics</li>
+                </ul>
+            </div>
+            
+            <div class="solution-point">
+                <h4>Infrastructure Protection</h4>
+                <ul>
+                    <li>Implement network segmentation for sensitive student data</li>
+                    <li>Use secure cloud storage solutions with proper encryption</li>
+                    <li>Regularly update and patch educational software systems</li>
+                    <li>Implement monitoring systems for unauthorized access attempts</li>
+                    <li>Establish secure backup procedures for critical educational data</li>
+                </ul>
+            </div>
+        </div>
         
-        <h2>Technical Measures for Educational Data</h2>
-        <ul>
-            <li>Encryption of student data both in transit and at rest</li>
-            <li>Strict access controls for educational records</li>
-            <li>Regular security audits of educational technology systems</li>
-            <li>Secure email practices for communicating student information</li>
-            <li>Data minimization in educational analytics</li>
-        </ul>
+        <div class="solution-card">
+            <h3>Policy Recommendations</h3>
+            
+            <div class="solution-point">
+                <h4>Institutional Policies</h4>
+                <ul>
+                    <li>Clear data retention policies for student records</li>
+                    <li>Transparent data sharing agreements with educational technology vendors</li>
+                    <li>Regular privacy training for educational staff</li>
+                    <li>Student and parental consent processes for data processing</li>
+                    <li>Incident response plans for educational data breaches</li>
+                </ul>
+            </div>
+            
+            <div class="solution-point">
+                <h4>Compliance Frameworks</h4>
+                <ul>
+                    <li>Develop FERPA compliance programs for US institutions</li>
+                    <li>Implement GDPR adherence for international students</li>
+                    <li>Create COPPA compliance protocols for younger students</li>
+                    <li>Establish regular compliance auditing procedures</li>
+                    <li>Develop vendor management policies for educational technology</li>
+                </ul>
+            </div>
+        </div>
         
-        <h2>Policy Recommendations</h2>
-        <ul>
-            <li>Clear data retention policies for student records</li>
-            <li>Transparent data sharing agreements with educational technology vendors</li>
-            <li>Regular privacy training for educational staff</li>
-            <li>Student and parental consent processes for data processing</li>
-            <li>Incident response plans for educational data breaches</li>
-        </ul>
+        <div class="solution-card">
+            <h3>GDPR Implementation in Educational Context</h3>
+            
+            <div class="solution-point">
+                <h4>Structural Measures</h4>
+                <ul>
+                    <li>Appoint Data Protection Officers in educational institutions</li>
+                    <li>Conduct Data Protection Impact Assessments for educational processing</li>
+                    <li>Implement age-appropriate consent mechanisms</li>
+                    <li>Ensure lawful basis for processing student data</li>
+                    <li>Facilitate student data rights exercises</li>
+                </ul>
+            </div>
+            
+            <div class="solution-point">
+                <h4>Operational Compliance</h4>
+                <ul>
+                    <li>Maintain records of processing activities for student data</li>
+                    <li>Implement data protection by design and by default</li>
+                    <li>Establish procedures for handling data subject requests</li>
+                    <li>Develop international data transfer mechanisms where needed</li>
+                    <li>Create data breach notification procedures</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Comprehensive Privacy Framework</h2>
+    
+    <div class="solution-grid">
+        <div class="solution-item">
+            <h4>Preventive Measures</h4>
+            <ul>
+                <li>Privacy by design in educational technology implementation</li>
+                <li>Regular staff training on data protection</li>
+                <li>Student education on digital privacy</li>
+                <li>Vendor security assessments</li>
+                <li>Data minimization practices</li>
+            </ul>
+        </div>
         
-        <h2>GDPR Implementation in Educational Context</h2>
-        <ul>
-            <li>Appoint Data Protection Officers in educational institutions</li>
-            <li>Conduct Data Protection Impact Assessments for educational processing</li>
-            <li>Implement age-appropriate consent mechanisms</li>
-            <li>Ensure lawful basis for processing student data</li>
-            <li>Facilitate student data rights exercises</li>
-        </ul>
-    </section>
+        <div class="solution-item">
+            <h4>Protective Measures</h4>
+            <ul>
+                <li>Encryption of sensitive educational data</li>
+                <li>Access controls and authentication systems</li>
+                <li>Network security measures</li>
+                <li>Physical security for data storage</li>
+                <li>Regular security testing</li>
+            </ul>
+        </div>
+        
+        <div class="solution-item">
+            <h4>Responsive Measures</h4>
+            <ul>
+                <li>Incident response planning</li>
+                <li>Data breach notification procedures</li>
+                <li>Communication protocols for privacy incidents</li>
+                <li>Recovery and restoration procedures</li>
+                <li>Post-incident review processes</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="solution-grid">
+        <div class="solution-item">
+            <h4>Technical Solutions</h4>
+            <ul>
+                <li>Endpoint protection for devices</li>
+                <li>Secure communication channels</li>
+                <li>Data loss prevention systems</li>
+                <li>Identity and access management</li>
+                <li>Cloud security configurations</li>
+            </ul>
+        </div>
+        
+        <div class="solution-item">
+            <h4>Policy Solutions</h4>
+            <ul>
+                <li>Clear acceptable use policies</li>
+                <li>Data classification standards</li>
+                <li>Third-party risk management</li>
+                <li>Privacy impact assessment requirements</li>
+                <li>Compliance monitoring programs</li>
+            </ul>
+        </div>
+        
+        <div class="solution-item">
+            <h4>Cultural Solutions</h4>
+            <ul>
+                <li>Privacy awareness campaigns</li>
+                <li>Ethical data use training</li>
+                <li>Stakeholder engagement programs</li>
+                <li>Transparency initiatives</li>
+                <li>Accountability frameworks</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 <%- include('partials/footer') %>
