@@ -117,12 +117,112 @@
         margin-left: 1.5rem;
         color: #475569;
     }
+    
+    /* New styles for stakeholder content */
+    .tension-section {
+        margin: 2.5rem 0;
+    }
+    
+    .tension-card {
+        background: #fff;
+        padding: 1.8rem;
+        border-radius: 0.8rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+        margin-bottom: 2rem;
+        border-left: 4px solid #2563eb;
+    }
+    
+    .tension-card h3 {
+        color: #1e293b;
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+    }
+    
+    .tension-point {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .tension-point:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .tension-point h4 {
+        color: #2563eb;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .tension-point p {
+        color: #475569;
+        margin-bottom: 0.5rem;
+    }
+    
+    .citation {
+        font-style: italic;
+        color: #64748b;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .solution-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .solution-card {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-top: 4px solid #2563eb;
+    }
+    
+    .solution-card h4 {
+        color: #1e293b;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .solution-card p {
+        color: #475569;
+    }
+    
+    .stakeholder-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+    }
+    
+    .stakeholder-table th, .stakeholder-table td {
+        padding: 0.8rem;
+        border: 1px solid #e2e8f0;
+    }
+    
+    .stakeholder-table th {
+        background-color: #f1f5f9;
+        font-weight: 600;
+    }
+    
+    .stakeholder-table tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
 </style>
 
 <!-- Navbar -->
 <nav>
     <h2>Data Privacy Hub</h2>
-    
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </nav>
 
 <!-- Hero Section -->
@@ -130,47 +230,125 @@
     <h1>Data Privacy & Protection in Education</h1>
     <p>Safeguarding student information in academic environments</p>
 </section>
-    <section class="content">
-        <h1>Key Stakeholders in Educational Data Privacy</h1>
+
+<!-- Content -->
+<section class="content">
+    <h2>Stakeholder Tensions: Conflicting Priorities in Educational Data Privacy</h2>
+    <p>Stakeholder tensions often arise from conflicting priorities among parents, schools, and corporate or systemic influences in the context of educational data privacy.</p>
+    <p class="citation">(Penuel, 2020)</p>
+    
+    <div class="tension-section">
+        <div class="tension-card">
+            <h3>Sources of Tension</h3>
+            
+            <div class="tension-point">
+                <h4>Parental Concerns vs. Institutional Priorities</h4>
+                <p>Parents often want more control over their children's educational data, seeking transparency about what information is collected and how it's used. They may question the necessity of certain data collection practices and want assurance about security measures.</p>
+                <p>Schools, on the other hand, may focus on system-wide data standards, administrative efficiency, and the educational benefits of data collection. They sometimes view detailed parental oversight as disruptive or impractical to implement.</p>
+                <p class="citation">(Riedy, 2020)</p>
+            </div>
+            
+            <div class="tension-point">
+                <h4>External Pressures</h4>
+                <p>Although corporations are not the main focus, broader policy and economic pressures, such as requirements for standardized testing data and funding limitations, can strain these relationships further. These pressures can push external agendas that may not align with local privacy values or needs.</p>
+            </div>
+        </div>
         
-        <h2>Students</h2>
-        <ul>
-            <li>Right to control educational personal information</li>
-            <li>Responsibility to practice good security habits with academic accounts</li>
-            <li>Ability to exercise privacy rights under educational privacy laws</li>
-            <li>Vulnerability as often less experienced with data privacy issues</li>
-        </ul>
+        <div class="tension-card">
+            <h3>Areas of Agreement and Disagreement</h3>
+            
+            <div class="tension-point">
+                <h4>Common Ground</h4>
+                <p>The basic objective of protecting student privacy while enabling educational achievement is something that most parents and schools share. Both groups generally want to ensure data is used responsibly to support learning outcomes.</p>
+                <p class="citation">(SLIWKA & ISTANCE, 2006)</p>
+            </div>
+            
+            <div class="tension-point">
+                <h4>Points of Divergence</h4>
+                <p>Stakeholders often disagree on what constitutes appropriate data use and how parents should be involved in decisions about data collection and sharing. For instance, teachers may resist certain parental involvement to maintain professional authority and instructional coherence, even though some parents want significant say in how their children's data is handled.</p>
+                <p>These conflicts are particularly noticeable in systems with high-stakes accountability measures or where there is limited trust between homes and schools regarding data practices.</p>
+                <p class="citation">(J. Peurach, 2020)</p>
+            </div>
+        </div>
         
-        <h2>Educational Institutions</h2>
-        <ul>
-            <li>Legal obligation to protect student data under FERPA, GDPR, etc.</li>
-            <li>Need to implement privacy-by-design in educational systems</li>
-            <li>Responsibility to report breaches involving student information</li>
-            <li>Balancing educational needs with privacy protection</li>
-        </ul>
+        <div class="tension-card">
+            <h3>Addressing Stakeholder Tensions</h3>
+            
+            <div class="tension-point">
+                <h4>Collaborative Approaches</h4>
+                <p>Structured, cooperative processes that promote mutual respect and group decision-making are essential to effective solutions for data privacy concerns. Parental voice can be incorporated into school data policies through formal platforms like parent councils, school governance bodies, and regular feedback systems.</p>
+                <p class="citation">(Moura & Teixeira, 2009; HELLARD, 2003)</p>
+            </div>
+            
+            <div class="tension-point">
+                <h4>Deep Collaboration Models</h4>
+                <p>Deeper collaborative methods, like networked improvement communities or community-based design research, go beyond consultation and include parents, teachers, and researchers as co-designers of data privacy solutions. These models emphasize collaborative problem-solving, iterative communication, and flexible implementation to gradually align priorities and foster trust.</p>
+            </div>
+        </div>
         
-        <h2>Parents and Guardians</h2>
-        <ul>
-            <li>Right to access children's educational records (for minors)</li>
-            <li>Responsibility to understand educational privacy policies</li>
-            <li>Role in providing consent for data processing</li>
-            <li>Advocacy for children's privacy rights</li>
-        </ul>
+        <div class="tension-card">
+            <h3>Root Causes of Disagreements</h3>
+            
+            <div class="tension-point">
+                <h4>Communication and Power Dynamics</h4>
+                <p>Communication problems, cultural differences, and power disparities are often at the root of conflicts about data privacy. Parents may feel disregarded or excluded from meaningful interaction, while educators may view parents as lacking technical expertise or overstepping boundaries.</p>
+                <p class="citation">(Sliwka, 2006)</p>
+            </div>
+            
+            <div class="tension-point">
+                <h4>Equity Concerns</h4>
+                <p>Racial and socioeconomic disparities frequently exacerbate these conflicts by further marginalizing certain voices. Frustration, disengagement, and even opposition to educational data initiatives can result from such tensions.</p>
+                <p>Addressing these problems requires not only administrative adjustments but also a dedication to equity, acknowledgement of diverse perspectives, and attempts to build trust between communities and schools regarding data practices.</p>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Stakeholder Perspectives on Educational Data Privacy</h2>
+    
+    <table class="stakeholder-table">
+        <tr>
+            <th>Stakeholder</th>
+            <th>Primary Concerns</th>
+            <th>Potential Tensions</th>
+        </tr>
+        <tr>
+            <td>Parents</td>
+            <td>• Child's privacy protection<br>• Transparency about data use<br>• Control over information</td>
+            <td>• May view schools as overly bureaucratic<br>• Concern about commercial use of data<br>• Desire for more involvement than schools may accommodate</td>
+        </tr>
+        <tr>
+            <td>Educators</td>
+            <td>• Educational benefits of data<br>• Administrative efficiency<br>• Legal compliance</td>
+            <td>• May view parental concerns as impediments to education<br>• Balancing privacy with educational innovation<br>• Resource constraints for addressing all concerns</td>
+        </tr>
+        <tr>
+            <td>Administrators</td>
+            <td>• Regulatory compliance<br>• Institutional risk management<br>• System-wide consistency</td>
+            <td>• Pressure to implement systems that may not address all stakeholder concerns<br>• Balancing competing priorities with limited resources<br>• Mediating between different stakeholder expectations</td>
+        </tr>
+        <tr>
+            <td>Technology Providers</td>
+            <td>• Product functionality<br>• Data utility<br>• Market competitiveness</td>
+            <td>• Privacy protections may be viewed as limiting functionality<br>• Business models may conflict with privacy values<br>• Variable understanding of educational contexts</td>
+        </tr>
+    </table>
+    
+    <div class="solution-grid">
+        <div class="solution-card">
+            <h4>Building Trust Through Transparency</h4>
+            <p>Clearly communicating what data is collected, how it's used, and what protections are in place can help address parental concerns while maintaining educational benefits.</p>
+        </div>
         
-        <h2>Educational Technology Providers</h2>
-        <ul>
-            <li>Responsibility to secure educational platforms</li>
-            <li>Need for transparent data practices with educational institutions</li>
-            <li>Compliance with educational privacy regulations</li>
-            <li>Ethical use of student learning analytics</li>
-        </ul>
+        <div class="solution-card">
+            <h4>Inclusive Decision-Making</h4>
+            <p>Creating structured opportunities for parent and community input on data policies helps ensure diverse perspectives are considered in privacy decisions.</p>
+        </div>
         
-        <h2>Regulators and Government Agencies</h2>
-        <ul>
-            <li>Enforcement of educational privacy laws</li>
-            <li>Guidance on compliance requirements for schools</li>
-            <li>Handling of educational privacy complaints</li>
-            <li>Limited information sharing under specific circumstances</li>
-        </ul>
-    </section>
+        <div class="solution-card">
+            <h4>Ongoing Education</h4>
+            <p>Providing resources to help all stakeholders understand the benefits and risks of educational data use fosters more informed discussions about privacy trade-offs.</p>
+        </div>
+    </div>
+</section>
+
 <%- include('partials/footer') %>
